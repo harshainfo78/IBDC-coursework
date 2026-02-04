@@ -1,0 +1,1733 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://USERNAME.github.io/IBDC-coursework/">
+      
+      
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>IBDC-coursework</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.84d31ad4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#linux-hpc-a-quick-guided-tour" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="IBDC-coursework" class="md-header__button md-logo" aria-label="IBDC-coursework" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IBDC-coursework
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Home
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="IBDC-coursework" class="md-nav__button md-logo" aria-label="IBDC-coursework" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    IBDC-coursework
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#syllabus-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Syllabus Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples-of-distributions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples of Distributions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-brief-history-of-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      A Brief History of Linux
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#importance-of-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Importance of Linux
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture-of-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecture of Linux
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deep-dive-into-linux-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deep Dive into Linux Architecture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deep Dive into Linux Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-kernel" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Kernel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-system-libraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. System Libraries
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Shell
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-hardware-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Hardware Layer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-system-utility" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. System Utility
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Terminal
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linux-file-hierarchy-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux File Hierarchy Structure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-linux-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Linux Shell
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Linux Shell">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#running-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running Commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command Options
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getting-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting help
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-navigating-the-filesystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Navigating the filesystem
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Navigating the filesystem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Objectives
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux-filesystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux Filesystem
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-file-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. File Operations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. File Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#learning-objectives_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Objectives
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-directories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating directories
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#good-naming-conventions-in-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Good naming conventions in linux
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moving-renaming" class="md-nav__link">
+    <span class="md-ellipsis">
+      Moving &amp; Renaming
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#syllabus-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Syllabus Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples-of-distributions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples of Distributions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-brief-history-of-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      A Brief History of Linux
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#importance-of-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Importance of Linux
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture-of-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecture of Linux
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deep-dive-into-linux-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deep Dive into Linux Architecture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deep Dive into Linux Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-kernel" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Kernel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-system-libraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. System Libraries
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Shell
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-hardware-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Hardware Layer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-system-utility" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. System Utility
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Terminal
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linux-file-hierarchy-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux File Hierarchy Structure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-linux-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Linux Shell
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Linux Shell">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#running-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running Commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command Options
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getting-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting help
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-navigating-the-filesystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Navigating the filesystem
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Navigating the filesystem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Objectives
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux-filesystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux Filesystem
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-file-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. File Operations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. File Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#learning-objectives_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Objectives
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-directories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating directories
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#good-naming-conventions-in-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Good naming conventions in linux
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moving-renaming" class="md-nav__link">
+    <span class="md-ellipsis">
+      Moving &amp; Renaming
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="linux-hpc-a-quick-guided-tour">Linux &amp; HPC: A Quick Guided Tour</h1>
+<h2 id="syllabus-overview">Syllabus Overview</h2>
+<ul>
+<li>Introduction</li>
+<li>Importance of Linux</li>
+<li>Architecture of Linux</li>
+<li>The Terminal</li>
+<li>Linux File Hierarchy Structure</li>
+<li>The Linux Shell</li>
+<li>Navigating the filesystem</li>
+<li>File Operations</li>
+</ul>
+<hr />
+<p><img alt="Image Description Goes Here" src="assets/img/1.png" />
+<img alt="Image Description Goes Here" src="assets/img/2.png" />
+<img alt="Image Description Goes Here" src="assets/img/3.png" />
+<img alt="Image Description Goes Here" src="assets/img/4.png" />
+<img alt="Image Description Goes Here" src="assets/img/5.png" />
+<img alt="Image Description Goes Here" src="assets/img/6.png" />
+<img alt="Image Description Goes Here" src="assets/img/7.png" />
+<img alt="Image Description Goes Here" src="assets/img/8.png" />
+<img alt="Image Description Goes Here" src="assets/img/9.png" />
+<img alt="Image Description Goes Here" src="assets/img/10.png" />
+<img alt="Image Description Goes Here" src="assets/img/12.png" />
+<img alt="Image Description Goes Here" src="assets/img/13.png" />
+<img alt="Image Description Goes Here" src="assets/img/15.png" />
+<img alt="Image Description Goes Here" src="assets/img/16.png" />
+<img alt="Image Description Goes Here" src="assets/img/17.png" /></p>
+<h2 id="introduction">Introduction</h2>
+<p>With the avant-garde technologies and constant evolution of scientific knowledge, biologists are faced with an increasing need for bioinformatics skills to deal with high-throughput data storage, retrieval, and analysis. Although several resources developed for such tasks have a graphical user interface, many operations can be more efficiently handled with command-line programs and utilities.</p>
+<p>The Linux shell is both a command-line interface (CLI) and a scripting language, allowing tasks to be done automatically and quickly. With the proper commands, the shell can repeat tasks with or without some modification as many times as we want.</p>
+<p>Linux is a family of free and open-source operating systems based on the Linux kernel. The <strong>Linux Kernel</strong> is like the brain of the operating system because it manages how the computer interacts with its hardware and resources. But the Linux Kernel alone is not enough to make a complete operating system. </p>
+<p>To create a full and functional system, the Linux Kernel is combined with a collection of software packages and utilities, which are together called <strong>Linux distributions</strong>. These distributions make the Linux Operating System ready for users to run their applications and perform tasks on their computers securely and effectively. Operating systems based on Linux are known as Linux distributions or distros. </p>
+<h3 id="examples-of-distributions">Examples of Distributions</h3>
+<ul>
+<li>Debian</li>
+<li>Ubuntu</li>
+<li>Fedora</li>
+<li>CentOS</li>
+<li>Gentoo</li>
+<li>Arch Linux</li>
+<li>Red Hat Enterprise Linux (RHEL)</li>
+</ul>
+<hr />
+<h2 id="a-brief-history-of-linux">A Brief History of Linux</h2>
+<blockquote>
+<p>Linux is an operating system that evolved from a kernel created by <strong>Linus Torvalds</strong> when he was a student at the University of Helsinki in 1991. </p>
+</blockquote>
+<p>When Linus Torvalds was studying at the University of Helsinki, he was using a version of the UNIX operating system called 'Minix'. Linus and other users sent requests for modifications and improvements to Minix's creator, Andrew Tanenbaum, but he felt that they weren't necessary. That's when Linus decided to create his own operating system that would take into account users' comments and suggestions for improvements. </p>
+<hr />
+<h2 id="importance-of-linux">Importance of Linux</h2>
+<p>Linux is a free, open-source operating system known for its flexibility, stability, and strong security. It is widely used in personal computing, server environments, and enterprise systems because of its performance and customization capabilities.</p>
+<ul>
+<li><strong>Security:</strong> Offers high security and stability, making it ideal for servers and development work.</li>
+<li><strong>Open Source:</strong> Fully open-source and free to use, modify, and distribute.</li>
+<li><strong>Flexibility:</strong> Highly flexible and customizable to suit different user and industry needs.</li>
+<li><strong>Community:</strong> Supported by a large global community and a vast software ecosystem.</li>
+</ul>
+<hr />
+<h2 id="architecture-of-linux">Architecture of Linux</h2>
+<p>Linux architecture refers to the layered structure of the Linux operating system that defines how its components - such as the kernel, shell, system libraries, and hardware interact with each other to manage system resources and execute user programs efficiently.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Layer</th>
+<th style="text-align: left;">Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Hardware</strong></td>
+<td style="text-align: left;">Physical components like CPU, RAM, and Disk.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Kernel</strong></td>
+<td style="text-align: left;">Core of the OS; manages hardware communication.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Shell</strong></td>
+<td style="text-align: left;">Interface that interprets commands for the Kernel.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Utilities</strong></td>
+<td style="text-align: left;">Software and tools that provide OS functionality.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="deep-dive-into-linux-architecture">Deep Dive into Linux Architecture</h2>
+<h3 id="1-kernel">1. Kernel</h3>
+<p>The kernel is the core of the Linux operating system that manages hardware resources and controls communication between software and hardware. 
+* <strong>Management:</strong> Handles process management, memory, and device control.
+* <strong>Security:</strong> Prevents conflicts between multiple running programs.</p>
+<h3 id="2-system-libraries">2. System Libraries</h3>
+<p>System libraries provide essential functions that allow applications to interact with the kernel without needing to access it directly. 
+* <strong>Efficiency:</strong> These libraries contain pre-written code that applications can use to perform specific tasks, saving developers time and effort.
+* <strong>Interface:</strong> They act as a bridge between applications and the kernel, providing a standardized and efficient way to interact with the underlying system.</p>
+<h3 id="3-shell">3. Shell</h3>
+<p>The shell is the command-line interface that allows users to communicate with the operating system by entering commands. 
+* <strong>Bridge:</strong> It interprets and executes user commands, forwarding requests to the kernel for processing.
+* <strong>Utility:</strong> Provides a convenient way to run programs, manage files, and configure the system.</p>
+<h3 id="4-hardware-layer">4. Hardware Layer</h3>
+<p>The hardware layer consists of physical components that execute commands and provide system resources. 
+* <strong>Components:</strong> Includes RAM (Random Access Memory), HDD (Hard Disk Drive), CPU (Central Processing Unit), and I/O devices.
+* <strong>Interaction:</strong> The Linux kernel and system libraries enable communication and control over these components, ensuring they work harmoniously.</p>
+<h3 id="5-system-utility">5. System Utility</h3>
+<p>System utilities are essential tools and programs provided by the Operating System to manage and configure various aspects of the system. 
+* <strong>Administrative Tasks:</strong> Installing software, configuring network settings, and monitoring system performance.
+* <strong>Management:</strong> Managing users and file permissions to maintain system efficiency.</p>
+<hr />
+<h2 id="the-terminal">The Terminal</h2>
+<p>While the terms "terminal," "shell," and "command line interface" are often used interchangeably, there are subtle differences:</p>
+<p>!!! info "Defining the Workspace"
+    * <strong>Terminal:</strong> An input and output environment that presents a text-only window running a shell.
+    * <strong>Shell:</strong> A program that exposes the computer’s operating system to a user or program (a command line interpreter).
+    * <strong>Command Line Interface (CLI):</strong> The user interface managed by the shell which processes commands and outputs results.</p>
+<p>In the context of Linux, "opening a terminal" generally refers to the environment where you run commands and see the results printed out.</p>
+<p>The terminal is interactive: users can specify commands to run and the terminal outputs the results of those commands. To execute any command, users need to type it into the prompt and press ENTER.</p>
+<p>When accessing a cloud server, most often it is accessed through a terminal shell. Although personal computers that run Linux often come with the kind of graphical desktop environment familiar to most computer users, it is often more efficient or practical to perform certain tasks through commands entered into the terminal.</p>
+<h2 id="linux-file-hierarchy-structure">Linux File Hierarchy Structure</h2>
+<p>The Linux File Hierarchy Structure or the Filesystem Hierarchy Standard (FHS) defines the directory structure and directory contents in Unix-like operating systems. It is maintained by the Linux Foundation. Nearly all Linux distributions are compliant with this universal standard filesystem directory structure. The FHS defines a set of directories, each of which serve their own special function.</p>
+<p>The forward slash (/) is used to indicate the root directory in the filesystem hierarchy defined by the FHS, all files and directories appear under the root directory /, even if they are stored on different physical or virtual devices.</p>
+<p>When a user logs in to the shell, they are brought to their own user directory, stored within /home/. This is referred to as the user’s home directory. The FHS defines /home/ as containing the home directories for regular users.</p>
+<p>The root user has its own home directory specified by the FHS: /root/. Note that / is referred to as the “root directory”, and that it is different from root/, which is stored within /.</p>
+<p>Because the FHS is the default filesystem layout on Linux machines, and each directory within it is included to serve a specific purpose, it simplifies the process of organizing files by their function. The following is a listing of common directories that are directly under the root (/) directory:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Directory</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>/bin</code></td>
+<td style="text-align: left;">important binary applications</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>/boot</code></td>
+<td style="text-align: left;">boot configuration files, kernels, and other files needed at boot time.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>/dev</code></td>
+<td style="text-align: left;">System device files.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>/etc</code></td>
+<td style="text-align: left;">configuration files, startup scripts, etc.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>/home</code></td>
+<td style="text-align: left;">List of home directories for different users</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>/lib</code></td>
+<td style="text-align: left;">system libraries, shared libraries</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>/lost+found</code></td>
+<td style="text-align: left;">a lost+found system for files that exist under the root (/) directory</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>/media</code></td>
+<td style="text-align: left;">automatically mounted (loaded) partitions on your hard drive and removable media such as CDs, digital cameras, etc.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>/mnt</code></td>
+<td style="text-align: left;">manually mounted filesystems on your hard drive</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>/opt</code></td>
+<td style="text-align: left;">3rd part applications to be installed</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>/proc</code></td>
+<td style="text-align: left;">Maintains information about the state of the system, including currently running processes.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>/root</code></td>
+<td style="text-align: left;">root user's home directory.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>/sbin</code></td>
+<td style="text-align: left;">important system binaries</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>/srv</code></td>
+<td style="text-align: left;">contain files that are served to other systems</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>/sys</code></td>
+<td style="text-align: left;">system files</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>/tmp</code></td>
+<td style="text-align: left;">temporary files</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>/usr</code></td>
+<td style="text-align: left;">applications and files that are mostly available for all users to access</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>/var</code></td>
+<td style="text-align: left;">variable files such as logs and databases</td>
+</tr>
+</tbody>
+</table>
+<h2 id="the-linux-shell">The Linux Shell</h2>
+<h3 id="running-commands">Running Commands</h3>
+<p>When the shell is first opened, you are presented with a prompt, indicating that the shell is waiting for input. A typical prompt on Linux may look like this: </p>
+<p><code>username@hostname:~$</code></p>
+<ul>
+<li><strong>username</strong> represents the username of the current user.</li>
+<li><strong>hostname</strong> represents the name of the computer or system.</li>
+<li><strong>~</strong> represents the current directory (in this case, the home directory).</li>
+<li><strong>$</strong> is the command prompt symbol, indicating that the shell is ready to accept commands.</li>
+</ul>
+<p>After you type a command, you have to press the <strong>Enter ↲</strong> key to execute it. So let’s try our first command, <code>ls</code> which is short for “listing”. This command will list the contents of the current directory.</p>
+<h3 id="command-options">Command Options</h3>
+<p>Commands can often change their behaviour with additional options. Consider the command below as a general example, which we will dissect into its component parts:
+<code>ls  -l  --sort  time  Documents/</code></p>
+<ul>
+<li><strong>ls</strong> is the command.</li>
+<li><strong>-l</strong> is an argument that “switches on” a particular behaviour of the program. In this case it lists the files in a “long” format. These kind of arguments are also called an option, switch or flag. Options either start with a single dash (<code>-</code>) or two dashes (<code>--</code>).</li>
+<li><strong>--sort</strong> is also an argument, but it needs a value to indicate how it should change the behaviour of the program. In this case, the option changes how the files are sorted (in our example we specified ‘time’ to sort files by the time they were created or modified).</li>
+<li><strong>Documents</strong> is a positional argument, which comes at the end of the command. This argument tells the command what to operate on (e.g. files and directories).</li>
+</ul>
+<p>A command can be called with more than one option and more than one argument: but a command doesn’t always require an argument or an option.</p>
+<p>Each part is separated by spaces: if you omit the space between <code>ls</code> and <code>-l</code> the shell will look for a command called <code>ls-l</code>, which doesn’t exist. Also, capitalisation can be important: <code>ls -r</code> is different to <code>ls -R</code>.</p>
+<p>So, our command above gives us a long listing of files and directories in the directory <code>Documents</code>.</p>
+<h3 id="getting-help">Getting help</h3>
+<p><code>ls</code> has lots of other options. There are two common ways to find out how to use a command and what options it accepts:</p>
+<ol>
+<li>We can pass a <code>--help</code> option to the command, such as <code>ls --help</code>.</li>
+<li>We can read its manual with <code>man</code>, such as <code>man ls</code>. To exit the man page you can type <code>q</code> (for “quit”).</li>
+</ol>
+<blockquote>
+<h3 id="summary">Summary</h3>
+<ul>
+<li>The <strong>Linux shell (command line)</strong> allows running complex operations with a few commands, interacting with <strong>high-performance computing servers</strong>, and writing reproducible analysis in scripts.</li>
+<li>The <strong>basic syntax</strong> of a command is: <code>command -options argument</code>.</li>
+<li>For example: <code>ls -l Documents</code> would list the contents of the Documents directory in a <strong>long format</strong>.</li>
+<li>To find the options available with a given program, we can use the <code>--help</code> function or (in some cases) the <code>man</code> command. </li>
+<li>For example: <code>ls --help</code> or <code>man ls</code>.</li>
+</ul>
+</blockquote>
+<h2 id="2-navigating-the-filesystem">2. Navigating the filesystem</h2>
+<h3 id="learning-objectives">Learning Objectives</h3>
+<ul>
+<li>Understand the hierarchical structure of filesystems and how the location of files and directories is specified.</li>
+<li>Distinguish between absolute and relative paths.</li>
+<li>Recognise when / is used to specify the root directory or to separate directories.</li>
+<li>Navigate the filesystem using the commands <code>pwd</code>, <code>ls</code> and <code>cd</code>.</li>
+<li>Make use of the <code>*</code> wildcard to match files by patterns.</li>
+<li>Use the <code>find</code> command to effectively search for files or directories.</li>
+</ul>
+<h3 id="linux-filesystem">Linux Filesystem</h3>
+<p>The part of the operating system responsible for managing files and directories is called the filesystem. It organizes our data into files and directories (also called folders), which hold files or other directories. These directories are organised in a hierarchical way, which we can represent as a tree.</p>
+<p>This is illustrating the location of the home directories for three users called “ibdc”, “rcb” and “ucsd”. We can see that each of their home directories is within another directory called home. And finally, the home directory is located in the root of the filesystem, represented by a / slash. The root is the top-most directory where everything for our operating system is stored in (it’s not possible to go “above” this special root directory).</p>
+<p>When we use the shell, we need to specify the location of files and directories using an “address” (similarly to how you specify an internet address to reach a given website). Let’s explore this from our shell terminal.</p>
+<p>First let’s find out where we are by running a command called pwd (which stands for “print working directory”). Directories are like places - at any time while we are using the shell we are in exactly one place, called our current working directory. Commands mostly read and write files in the current working directory, so knowing where you are before running a command is important.</p>
+<p>pwd
+/home/ibdc</p>
+<p>Here, the computer’s response is /home/ibdc, which is the home directory, the default when opening a new shell terminal. The name “ibdc” is the username.
+If the user “rcb” was logged in, they would see /home/rcb as their default working directory.
+Notice how the location of this folder is specified:
+/ at the start specifies the root of the filesystem.
+home specifies the folder “home” within the root.
+/ is a separator between the “home” folder and the next folder.</p>
+<p>The way of representing file or directory locations is called a path.
+The / slash - Notice that there are two meanings for the / character. When it appears at the beginning of a file or directory name, it refers to the root directory. When it appears inside a name, it’s a separator.
+Home directory variation - The home directory path will look different on different operating systems. For a user named “ucsd”, on a Mac it would look like /Users/ucsd, and on Windows C:\Users\ucsd.
+Listing files: We can see the content of our current directory by running ls, which stands for “listing”:</p>
+<p>Changing Directory: The command to change locations is cd (“change directory”) followed by a directory name to change our working directory.
+cd /home/ibdc/data
+We can check with pwd that we are in the correct directory. We can also run ls again to see the files within our current directory.
+There are two ways to specify directory names:
+An absolute path includes the entire path (or location) from the root directory, which is indicated by a leading slash. The leading / tells the computer to follow the path from the root of the filesystem, so it always refers to exactly one directory, no matter where we are when we run the command.
+A relative path tries to find that location from where we are (our current directory), rather than from the root of the filesystem.
+The shell interprets the character ~ (tilde) at the start of a path to mean “the user’s home directory”. In our example the ~ is equivalent to /home/ibdc.
+We now know how to go down the directory tree, but how do we go up? cd can only see sub-directories inside your current directory. To move up one directory we need to use the special shortcut .. like this: cd ..</p>
+<p>Wildcards: Wildcards are special characters that can be used to access multiple files at once. The most commonly-used wildcard is *, which is used to match zero or more characters.</p>
+<p><em>.pdb matches every file that ends with ‘.pdb’ extension.
+Another common wildcard is ?, which matches any character exactly once.
+Finding Files: Often, it’s useful to be able to find files that have a particular pattern in their name. We can use the find command to achieve this. Here is an example, where we try to find all the text files that exist in the working folder:
+find . -type f -name "</em>.txt"
+In this case, we used the option -type f to only find files with the given name. We could use the option -type d if we wanted to instead find directories only. If we wanted to find both files and directories, then we can omit this option.
+We used -name to specify the name of the file we wanted to search for. Similarly to ls, you can use the * wildcard to match any number of characters. In our example, we used <em>.txt to find all files with the .txt file extension.
+Finally, we searched for files from the current location we were in. That’s what the . in the command above means: search for files from the current directory. If we wanted to find files in a different directory without having to cd into it first, we could replace . with the name/path of the directory we want to search from. 
+One option that can sometimes be useful is to find and delete all the files. For example, the following command would delete all files with .txt extension:
+find . -type f -name "</em>.txt" -delete
+As you can imagine, this feature is very useful but also potentially dangerous as you may accidentally delete files you didn’t intend to. So, always make sure to run the command without the -delete option first to check that only the files you really want to delete are being matched.</p>
+<p>!!! tip ### " Summary"</p>
+<ul>
+<li>The filesystem is organised in a hierarchical way.</li>
+<li>Every user has a home directory, which on Linux is <code>/home/username/</code>.</li>
+<li>Locations in the filesystem are represented by a <strong>path</strong>:<ul>
+<li>The <code>/</code> used at the start of a path means the <strong>“root”</strong> directory (the start of the filesystem).</li>
+<li><code>/</code> used in the middle of the path separates different directories.</li>
+</ul>
+</li>
+<li>Some of the commands used to navigate the filesystem are:<ul>
+<li><code>pwd</code> to print the working directory (or the current directory)</li>
+<li><code>ls</code> to list files and directories</li>
+<li><code>cd</code> to change directory</li>
+</ul>
+</li>
+<li>Directories can be created with the <code>mkdir</code> command.</li>
+<li>Files can be moved and/or renamed using the <code>mv</code> command.</li>
+<li>Files can be copied with the <code>cp</code> command. To copy an entire directory (and its contents) we need to use <code>cp -r</code> (the <code>-r</code> option will copy files recursively).</li>
+<li>Files can be removed with the <code>rm</code> command. To remove an entire directory (and its contents) we need to use <code>rm -r</code> (the <code>-r</code> option will remove files recursively).</li>
+<li><strong>Deleting files from the command line is permanent.</strong></li>
+<li>We can operate on multiple files using the <code>*</code> <strong>wildcard</strong>, which matches “zero or more characters”. For example <code>ls *.txt</code> would list all files that have a <code>.txt</code> file extension.</li>
+<li>The <code>find</code> command can be used to find the location of files matching a specific name pattern.</li>
+</ul>
+<h2 id="3-file-operations">3. File Operations</h2>
+<h3 id="learning-objectives_1">Learning Objectives</h3>
+<ul>
+<li>Distinguish between copying and moving files.</li>
+<li>Recognise how accidental and irreversible data loss may occur when moving or copying files.</li>
+<li>Create, move, copy and remove files and directories using the commands <code>mkdir</code>, <code>mv</code>, <code>cp</code>, <code>rm</code> and <code>rmdir</code>.</li>
+</ul>
+<h3 id="creating-directories">Creating directories</h3>
+<p>We now know how to explore files and directories, but how do we create them in the first place? First, we should see where we are and what we already have. Let’s go to one directory and use <code>ls</code> to see what it contains:</p>
+<p>```bash
+cd ~/ibdc_workshop/working_files/
+ls</p>
+<p>Now, let’s create a new directory called test_files using the command mkdir (“make directory”):
+Bash
+mkdir test_files</p>
+<p>The new directory is created in the current working directory and use ls to see the contents.
+Note that using the shell to create a directory is no different than using a file explorer. If you open the current directory using your operating system’s graphical file explorer, the results directory will appear there too. While the shell and the file explorer are two different ways of interacting with the files, the files and directories themselves are the same.</p>
+<blockquote>
+<h3 id="good-naming-conventions-in-linux">Good naming conventions in linux</h3>
+<p>Complicated names of files and directories can make your life painful when working on the command line.
+Here are some useful tips for naming your files:</p>
+<ul>
+<li><strong>Don’t use spaces.</strong>
+  Spaces can make a name more meaningful, but since spaces are used to separate arguments on the command line it is better to avoid them in names of files and directories. You can use - or _ instead (e.g. <code>test_files/</code> rather than <code>test files/</code>).</li>
+<li><strong>Don’t begin the name with - (dash).</strong>
+  Commands treat names starting with - as options.</li>
+<li><strong>Only use letters, numbers, . period, - hyphen and _ underscore.</strong>
+  Many other characters (such as !, @, $, ", etc.) have special meanings on the command line and can cause your command to not work as expected or even lead to data loss.</li>
+<li><strong>If you need to refer to names of files or directories that have spaces or other special characters, you should surround the name in quotes (" ").</strong></li>
+</ul>
+</blockquote>
+<p>Markdown</p>
+<h3 id="moving-renaming">Moving &amp; Renaming</h3>
+<p>In our <code>~/ibdc-workshop/test_data/</code> directory we have a file called <code>6M0J.pdb</code>, which is a crystal structure file of SARS-CoV-2 spike receptor-binding domain bound with human ACE2 protein. Let’s move this file to the <code>working_data/</code> directory we created earlier, using the command <code>mv</code> (“move”):</p>
+<p>```bash
+mv 6M0J.pdb ../working_data/</p>
+<p>The first argument tells mv what we’re “moving”, while the second is where it’s to go. In this case, we’re moving 6M0J.pdb to working_data/. We can check the file has moved there:
+Bash
+ls ../working_data/</p>
+<p>If this is not an informative name for our file we can change the name by using the mv command. Here’s how we could change a file’s name:
+Bash
+mv ../working_data/6M0J.pdb ../working_data/Spike-RBD_6M0J.pdb</p>
+<p>In this case, we are “moving” the file to the same place but with a different name. Be careful when specifying the target file name, since mv will silently overwrite any existing file with the same name, which could lead to data loss.
+The command mv also works with directories, and you can use it to move/rename an entire directory just as you use it to move an individual file.</p>
+<p>Copying Files and Directories
+The cp command works very much like mv, except it copies a file instead of moving it. For example, let’s make a copy of our .pdb file:
+Bash
+cp ~/ibdc-workshop/working_data/Spike-RBD_6M0J.pdb 6M0J_copy.pdb</p>
+<p>Copy a File: cp source_file.txt destination_file.txt
+Copy File to Directory: cp file.txt /path/to/folder/
+Copy Directory (Recursive): cp -r source_dir destination_dir
+Copy Multiple Files: cp file1.txt file2.txt /destination/folder/
+Preserve Attributes: cp -a source/ destination/ (preserves structure, permissions, and timestamps)
+Verbose Mode: cp -v (shows files as they are copied)
+Prompt Before Overwriting: cp -i
+Copying within the same directory: cp file.txt file_copy.txt
+Copying to a different directory: cp file.txt /home/user/documents/
+Copying the contents of a folder: cp -r dir1/* dir2/</p>
+<p>Removing Files and Directories
+The Unix command used to remove or delete files is rm (“remove”). For example, let’s remove one of the files we copied earlier:
+Bash
+rm 6M0J_copy.pdb</p>
+<p>We can confirm the file is gone using ls. What if we try to remove the whole test_dir/ directory we created earlier:
+Bash
+rm test_dir/</p>
+<h1 id="rm-cannot-remove-test_dir-is-a-directory">rm: cannot remove 'test_dir/': Is a directory</h1>
+<p>We get an error. This happens because rm by default only works on files, not directories.
+rm can remove a directory and all its contents if we use the recursive option -r, and it will do so without any confirmation prompts:
+Bash
+rm -r test_dir/</p>
+<p>Given that there is no way to retrieve files deleted using the shell, rm -r should be used with great caution (you might consider adding the interactive option rm -r -i).
+To remove empty directories, we can also use the rmdir command. This is a safer option than rm -r, because it will never delete the directory if it contains files, giving us a chance to check whether we really want to delete all its contents.</p>
+<blockquote>
+<h3 id="summary_1">Summary</h3>
+<ul>
+<li>Directories can be created with the <code>mkdir</code> command.</li>
+<li>Files can be moved and/or renamed using the <code>mv</code> command.</li>
+<li><strong>Data loss warning:</strong> If files of the same name exist in the destination, they will be overwritten.</li>
+<li>Files can be copied with the <code>cp</code> command.</li>
+<li>To copy an entire directory (and its contents) we need to use <code>cp -r</code> (the <code>-r</code> option will copy files recursively).</li>
+<li><strong>Data loss warning:</strong> If files of the same name exist in the destination, they will be overwritten.</li>
+<li>Files can be removed with the <code>rm</code> command. To remove an entire directory (and its contents) we need to use <code>rm -r</code> (the <code>-r</code> option will remove files recursively).</li>
+<li><strong>Data loss warning:</strong> Deleting files from the command line is permanent.</li>
+</ul>
+</blockquote>
+<h1 id="linux-command-reference">Linux Command Reference</h1>
+<h2 id="file-commands">File Commands</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">#</th>
+<th style="text-align: left;">Command</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;"><code>ls</code></td>
+<td style="text-align: left;">Directory listing</td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;"><code>ls -al</code></td>
+<td style="text-align: left;">Formatted listing with hidden files</td>
+</tr>
+<tr>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;"><code>ls -lt</code></td>
+<td style="text-align: left;">Sorting the Formatted listing by time modification</td>
+</tr>
+<tr>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;"><code>ls -ltr</code></td>
+<td style="text-align: left;">Shows the files in the long listing format in reverse sorted by modification time</td>
+</tr>
+<tr>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;"><code>cd &lt;dir&gt;</code></td>
+<td style="text-align: left;">Change directory to dir</td>
+</tr>
+<tr>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;"><code>cd</code></td>
+<td style="text-align: left;">Change to home directory</td>
+</tr>
+<tr>
+<td style="text-align: left;">7</td>
+<td style="text-align: left;"><code>pwd</code></td>
+<td style="text-align: left;">Show current working directory</td>
+</tr>
+<tr>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;"><code>mkdir &lt;dir&gt;</code></td>
+<td style="text-align: left;">Creating a directory dir</td>
+</tr>
+<tr>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;"><code>cat</code></td>
+<td style="text-align: left;">Display the content of a file, copy content from one file to another, or concatenate multiple files</td>
+</tr>
+<tr>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;"><code>more</code></td>
+<td style="text-align: left;">View the contents of a file one screen at a time (permits forward scrolling)</td>
+</tr>
+<tr>
+<td style="text-align: left;">11</td>
+<td style="text-align: left;"><code>less</code></td>
+<td style="text-align: left;">View the contents of a file one screen at a time (forward and backward navigation)</td>
+</tr>
+<tr>
+<td style="text-align: left;">12</td>
+<td style="text-align: left;"><code>head</code></td>
+<td style="text-align: left;">Output the first 10 lines of the file</td>
+</tr>
+<tr>
+<td style="text-align: left;">13</td>
+<td style="text-align: left;"><code>tail</code></td>
+<td style="text-align: left;">Output the last 10 lines of the file</td>
+</tr>
+<tr>
+<td style="text-align: left;">14</td>
+<td style="text-align: left;"><code>tail -f &lt;file&gt;</code></td>
+<td style="text-align: left;">Output the contents of file as it grows, starting with the last 10 lines</td>
+</tr>
+<tr>
+<td style="text-align: left;">15</td>
+<td style="text-align: left;"><code>touch</code></td>
+<td style="text-align: left;">Create or update file</td>
+</tr>
+<tr>
+<td style="text-align: left;">16</td>
+<td style="text-align: left;"><code>rm</code></td>
+<td style="text-align: left;">Deleting the file</td>
+</tr>
+<tr>
+<td style="text-align: left;">17</td>
+<td style="text-align: left;"><code>rm -r</code></td>
+<td style="text-align: left;">Deleting the directory</td>
+</tr>
+<tr>
+<td style="text-align: left;">18</td>
+<td style="text-align: left;"><code>rm -f</code></td>
+<td style="text-align: left;">Force to remove the file</td>
+</tr>
+<tr>
+<td style="text-align: left;">19</td>
+<td style="text-align: left;"><code>rm -rf</code></td>
+<td style="text-align: left;">Force to remove the directory</td>
+</tr>
+<tr>
+<td style="text-align: left;">20</td>
+<td style="text-align: left;"><code>cp</code></td>
+<td style="text-align: left;">Copy the file</td>
+</tr>
+<tr>
+<td style="text-align: left;">21</td>
+<td style="text-align: left;"><code>cp -r</code></td>
+<td style="text-align: left;">Copy the entire directory</td>
+</tr>
+<tr>
+<td style="text-align: left;">22</td>
+<td style="text-align: left;"><code>mv</code></td>
+<td style="text-align: left;">Rename or moving file</td>
+</tr>
+</tbody>
+</table>
+<h2 id="process-management">Process Management</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">#</th>
+<th style="text-align: left;">Command</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;"><code>ps</code></td>
+<td style="text-align: left;">To display the currently working processes</td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;"><code>top</code></td>
+<td style="text-align: left;">Display all running process</td>
+</tr>
+<tr>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;"><code>kill &lt;pid&gt;</code></td>
+<td style="text-align: left;">Kill the process with given pid</td>
+</tr>
+<tr>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;"><code>pkill &lt;pattern&gt;</code></td>
+<td style="text-align: left;">Will kill all processes matching the pattern</td>
+</tr>
+<tr>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;"><code>bg</code></td>
+<td style="text-align: left;">List stopped or background jobs; resume a stopped job in the background</td>
+</tr>
+<tr>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;"><code>fg</code></td>
+<td style="text-align: left;">Brings the most recent job to foreground</td>
+</tr>
+</tbody>
+</table>
+<h2 id="file-permission">File Permission</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Command</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>chmod</code></td>
+<td style="text-align: left;">Change the permission of file to octal. Sum values for User, Group, and World:</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">• <strong>4</strong> - read (r)</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">• <strong>2</strong> - write (w)</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">• <strong>1</strong> - execute (x)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="searching">Searching</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">#</th>
+<th style="text-align: left;">Command</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;"><code>grep &lt;pattern&gt; &lt;file&gt;</code></td>
+<td style="text-align: left;">Search for pattern in file</td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;"><code>grep -r &lt;pattern&gt; &lt;dir&gt;</code></td>
+<td style="text-align: left;">Search recursively for pattern in dir</td>
+</tr>
+<tr>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;"><code>command \| grep &lt;pattern&gt;</code></td>
+<td style="text-align: left;">Search pattern in the output of a command</td>
+</tr>
+<tr>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;"><code>pgrep &lt;pattern&gt;</code></td>
+<td style="text-align: left;">Searches for all named processes matching the pattern and returns their ID</td>
+</tr>
+<tr>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;"><code>locate &lt;file&gt;</code></td>
+<td style="text-align: left;">Find all instances of file</td>
+</tr>
+</tbody>
+</table>
+<h2 id="system-info">System Info</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">#</th>
+<th style="text-align: left;">Command</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;"><code>date</code></td>
+<td style="text-align: left;">Show the current date and time</td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;"><code>cal</code></td>
+<td style="text-align: left;">Show the present month's calendar</td>
+</tr>
+<tr>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;"><code>uptime</code></td>
+<td style="text-align: left;">Show current uptime</td>
+</tr>
+<tr>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;"><code>w</code></td>
+<td style="text-align: left;">Display who is online</td>
+</tr>
+<tr>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;"><code>whoami</code></td>
+<td style="text-align: left;">Who you are logged in as</td>
+</tr>
+<tr>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;"><code>finger &lt;user&gt;</code></td>
+<td style="text-align: left;">Display information about user</td>
+</tr>
+<tr>
+<td style="text-align: left;">7</td>
+<td style="text-align: left;"><code>uname -a</code></td>
+<td style="text-align: left;">Show kernel information</td>
+</tr>
+<tr>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;"><code>cat /proc/cpuinfo</code></td>
+<td style="text-align: left;">CPU information</td>
+</tr>
+<tr>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;"><code>man &lt;command&gt;</code></td>
+<td style="text-align: left;">Show the manual for command</td>
+</tr>
+<tr>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;"><code>df -h</code></td>
+<td style="text-align: left;">Show disk usage in human-readable format</td>
+</tr>
+<tr>
+<td style="text-align: left;">11</td>
+<td style="text-align: left;"><code>du -sh</code></td>
+<td style="text-align: left;">Show directory space usage</td>
+</tr>
+<tr>
+<td style="text-align: left;">12</td>
+<td style="text-align: left;"><code>free</code></td>
+<td style="text-align: left;">Show memory and swap usage</td>
+</tr>
+<tr>
+<td style="text-align: left;">13</td>
+<td style="text-align: left;"><code>whereis &lt;tool&gt;</code></td>
+<td style="text-align: left;">Show possible locations of tool</td>
+</tr>
+<tr>
+<td style="text-align: left;">14</td>
+<td style="text-align: left;"><code>which &lt;tool&gt;</code></td>
+<td style="text-align: left;">Show which application will be run by default</td>
+</tr>
+</tbody>
+</table>
+<h2 id="compression">Compression</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">#</th>
+<th style="text-align: left;">Command</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;"><code>tar cf file.tar file</code></td>
+<td style="text-align: left;">Create tar named file.tar containing file</td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;"><code>tar xf file.tar</code></td>
+<td style="text-align: left;">Extract the files from file.tar</td>
+</tr>
+<tr>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;"><code>tar czf file.tar.gz files</code></td>
+<td style="text-align: left;">Create a tar with Gzip compression</td>
+</tr>
+<tr>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;"><code>tar xzf file.tar.gz</code></td>
+<td style="text-align: left;">Extract a tar using Gzip</td>
+</tr>
+<tr>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;"><code>tar cjf file.tar.bz2</code></td>
+<td style="text-align: left;">Create tar with Bzip2 compression</td>
+</tr>
+<tr>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;"><code>tar xjf file.tar.bz2</code></td>
+<td style="text-align: left;">Extract a tar using Bzip2</td>
+</tr>
+<tr>
+<td style="text-align: left;">7</td>
+<td style="text-align: left;"><code>gzip file</code></td>
+<td style="text-align: left;">Compresses file and renames it to file.gz</td>
+</tr>
+<tr>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;"><code>gzip -d file.gz</code></td>
+<td style="text-align: left;">Decompresses file.gz back to file</td>
+</tr>
+</tbody>
+</table>
+<h2 id="network">Network</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">#</th>
+<th style="text-align: left;">Command</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;"><code>ping host</code></td>
+<td style="text-align: left;">Ping host and output results</td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;"><code>whois domain</code></td>
+<td style="text-align: left;">Get whois information for domains</td>
+</tr>
+<tr>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;"><code>dig domain</code></td>
+<td style="text-align: left;">Get DNS information for domain</td>
+</tr>
+<tr>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;"><code>wget &lt;file&gt;</code></td>
+<td style="text-align: left;">Download file</td>
+</tr>
+<tr>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;"><code>wget -c file</code></td>
+<td style="text-align: left;">Continue a stopped download</td>
+</tr>
+</tbody>
+</table>
+<h2 id="shortcuts">Shortcuts</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Shortcut</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>Ctrl + C</code></td>
+<td style="text-align: left;">Halts the current command</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Ctrl + D</code></td>
+<td style="text-align: left;">Logout the current session, similar to exit</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Ctrl + W</code></td>
+<td style="text-align: left;">Erases one word in the current line</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Ctrl + U</code></td>
+<td style="text-align: left;">Erases the whole line</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Ctrl + R</code></td>
+<td style="text-align: left;">Type to bring up a recent command</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>!!</code></td>
+<td style="text-align: left;">Repeats the last command</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>exit</code></td>
+<td style="text-align: left;">Logout the current session</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
