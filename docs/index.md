@@ -1,6 +1,6 @@
 # Linux & HPC: A Quick Guided Tour
 
-## Syllabus Overview
+!!! Syllabus Overview
 * Introduction
 * Importance of Linux
 * Architecture of Linux
@@ -48,10 +48,10 @@ Linux is a family of free and open-source operating systems based on the Linux k
 
 Linux is a free, open-source operating system known for its flexibility, stability, and strong security. It is widely used in personal computing, server environments, and enterprise systems because of its performance and customization capabilities.
 
-- ==Offers high security and stability, making it ideal for servers and development work.==
-- ==Fully open-source and free to use, modify, and distribute.==
-- ==Highly flexible and customizable to suit different user and industry needs.==
-- ==Supported by a large global community and a vast software ecosystem.==
+* Offers high security and stability, making it ideal for servers and development work.
+* Fully open-source and free to use, modify, and distribute.
+* Highly flexible and customizable to suit different user and industry needs.
+* Supported by a large global community and a vast software ecosystem.
 
 
 **Architecture of Linux**
@@ -161,8 +161,8 @@ So, our command above gives us a long listing of files and directories in the di
 2.  We can read its manual with <i style="color:blue;">man</i>, such as <i style="color:blue;">man ls</i>. To exit the man page you can type **q** (for “quit”).
 
 
-!!! tip  
-**Summary**
+!!! **Summary**  
+
 
 * The Linux shell (command line) allows running complex operations with a few commands, interact with high-performance computing servers and write reproducible analysis in scripts.
 * The basic syntax of a command is: <i style="color:blue;">command -options argument</i>.
@@ -256,8 +256,7 @@ One option that can sometimes be useful is to find and delete all the files. For
 As you can imagine, this feature is very useful but also potentially dangerous as you may accidentally delete files you didn’t intend to. So, always make sure to run the command without the <i style="color:blue;">-delete</i> option first to check that only the files you really want to delete are being matched.
 
 
-!!! tip 
-### **"Summary"**
+!!! **"Summary"** 
 
 * The filesystem is organised in a hierarchical way.
 * Every user has a home directory, which on Linux is `/home/username/`.
@@ -315,7 +314,7 @@ Here are some useful tips for naming your files:
 If you need to refer to names of files or directories that have spaces or other special characters, you should surround the name in quotes (<i style="color:blue;">" "</i>).
 
 
-**Moving & Renaming**: In our **~/ibdc-workshop/test_data/`** directory we have a file called **6M0J.pdb**, which is a crystal structure file of SARS-CoV-2 spike receptor-binding domain bound with human ACE2 protein. Let’s move this file to the **working_data/** directory we created earlier, using the command `mv` (“move”):
+**Moving & Renaming**: In our **~/ibdc-workshop/test_data/** directory we have a file called **6M0J.pdb**, which is a crystal structure file of SARS-CoV-2 spike receptor-binding domain bound with human ACE2 protein. Let’s move this file to the **working_data/** directory we created earlier, using the command <i style="color:blue;">mv</i> (“move”):
 
 
 **mv 6M0J.pdb ../working_data/**
