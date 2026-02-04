@@ -242,15 +242,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#syllabus-overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Syllabus Overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
       Introduction
@@ -282,15 +273,6 @@
   <a href="#learning-objectives" class="md-nav__link">
     <span class="md-ellipsis">
       Learning Objectives
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      "Summary"
     </span>
   </a>
   
@@ -360,15 +342,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#syllabus-overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Syllabus Overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
       Introduction
@@ -400,15 +373,6 @@
   <a href="#learning-objectives" class="md-nav__link">
     <span class="md-ellipsis">
       Learning Objectives
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      "Summary"
     </span>
   </a>
   
@@ -460,7 +424,9 @@
 
 
 <h1 id="linux-hpc-a-quick-guided-tour">Linux &amp; HPC: A Quick Guided Tour</h1>
-<h2 id="syllabus-overview">Syllabus Overview</h2>
+<div class="admonition syllabus overview">
+<p class="admonition-title">Syllabus</p>
+</div>
 <ul>
 <li>Introduction</li>
 <li>Importance of Linux</li>
@@ -499,10 +465,10 @@
 <p><strong>Importance of Linux</strong></p>
 <p>Linux is a free, open-source operating system known for its flexibility, stability, and strong security. It is widely used in personal computing, server environments, and enterprise systems because of its performance and customization capabilities.</p>
 <ul>
-<li><mark>Offers high security and stability, making it ideal for servers and development work.</mark></li>
-<li><mark>Fully open-source and free to use, modify, and distribute.</mark></li>
-<li><mark>Highly flexible and customizable to suit different user and industry needs.</mark></li>
-<li><mark>Supported by a large global community and a vast software ecosystem.</mark></li>
+<li>Offers high security and stability, making it ideal for servers and development work.</li>
+<li>Fully open-source and free to use, modify, and distribute.</li>
+<li>Highly flexible and customizable to suit different user and industry needs.</li>
+<li>Supported by a large global community and a vast software ecosystem.</li>
 </ul>
 <p><strong>Architecture of Linux</strong>
 Linux architecture refers to the layered structure of the Linux operating system that defines how its components - such as the kernel, shell, system libraries, and hardware interact with each other to manage system resources and execute user programs efficiently.</p>
@@ -652,10 +618,7 @@ Linux architecture refers to the layered structure of the Linux operating system
 <li>We can pass a <i style="color:blue;">--help</i> option to the command, such as <i style="color:blue;">ls --help</i>.</li>
 <li>We can read its manual with <i style="color:blue;">man</i>, such as <i style="color:blue;">man ls</i>. To exit the man page you can type <strong>q</strong> (for “quit”).</li>
 </ol>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-</div>
-<p><strong>Summary</strong></p>
+<p>!!! <strong>Summary</strong>  </p>
 <ul>
 <li>The Linux shell (command line) allows running complex operations with a few commands, interact with high-performance computing servers and write reproducible analysis in scripts.</li>
 <li>The basic syntax of a command is: <i style="color:blue;">command -options argument</i>.
@@ -714,10 +677,7 @@ If the user “rcb” was logged in, they would see <i style="color:blue;">/home
 <p>One option that can sometimes be useful is to find and delete all the files. For example, the following command would delete all files with <i style="color:blue;">.txt</i> extension:</p>
 <p><strong>find . -type f -name "*.txt" -delete</strong></p>
 <p>As you can imagine, this feature is very useful but also potentially dangerous as you may accidentally delete files you didn’t intend to. So, always make sure to run the command without the <i style="color:blue;">-delete</i> option first to check that only the files you really want to delete are being matched.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-</div>
-<h3 id="summary"><strong>"Summary"</strong></h3>
+<p>!!! <strong>"Summary"</strong> </p>
 <ul>
 <li>The filesystem is organised in a hierarchical way.</li>
 <li>Every user has a home directory, which on Linux is <code>/home/username/</code>.</li>
@@ -766,7 +726,7 @@ If the user “rcb” was logged in, they would see <i style="color:blue;">/home
      Many other characters (such as !, @, $, ", etc.) have special meanings on the command  line and can cause your command to not work as expected or even lead to data loss.</li>
 </ul>
 <p>If you need to refer to names of files or directories that have spaces or other special characters, you should surround the name in quotes (<i style="color:blue;">" "</i>).</p>
-<p><strong>Moving &amp; Renaming</strong>: In our **~/ibdc-workshop/test_data/<code>** directory we have a file called **6M0J.pdb**, which is a crystal structure file of SARS-CoV-2 spike receptor-binding domain bound with human ACE2 protein. Let’s move this file to the **working_data/** directory we created earlier, using the command</code>mv` (“move”):</p>
+<p><strong>Moving &amp; Renaming</strong>: In our <strong>~/ibdc-workshop/test_data/</strong> directory we have a file called <strong>6M0J.pdb</strong>, which is a crystal structure file of SARS-CoV-2 spike receptor-binding domain bound with human ACE2 protein. Let’s move this file to the <strong>working_data/</strong> directory we created earlier, using the command <i style="color:blue;">mv</i> (“move”):</p>
 <p><strong>mv 6M0J.pdb ../working_data/</strong></p>
 <p>The first argument tells <i style="color:blue;">mv</i> what we’re “moving”, while the second is where it’s to go. In this case, we’re moving 6M0J.pdb to working_data/. We can check the file has moved there:</p>
 <p><strong>ls ../working_data/</strong></p>
