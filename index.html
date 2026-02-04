@@ -458,15 +458,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#summary_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Summary
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -774,15 +765,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#summary_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Summary
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -868,6 +850,16 @@
 <li>File Operations</li>
 </ul>
 <hr />
+<p><img alt="Image Description Goes Here" src="assets/images/1.png" />
+<img alt="Image Description Goes Here" src="assets/images/2.png" />
+<img alt="Image Description Goes Here" src="assets/images/3.png" />
+<img alt="Image Description Goes Here" src="assets/images/4.png" />
+<img alt="Image Description Goes Here" src="assets/images/5.png" />
+<img alt="Image Description Goes Here" src="assets/images/6.png" />
+<img alt="Image Description Goes Here" src="assets/images/7.png" />
+<img alt="Image Description Goes Here" src="assets/images/8.png" />
+<img alt="Image Description Goes Here" src="assets/images/9.png" />
+<img alt="Image Description Goes Here" src="assets/images/10.png" /></p>
 <h2 id="introduction">Introduction</h2>
 <p>With the avant-garde technologies and constant evolution of scientific knowledge, biologists are faced with an increasing need for bioinformatics skills to deal with high-throughput data storage, retrieval, and analysis. Although several resources developed for such tasks have a graphical user interface, many operations can be more efficiently handled with command-line programs and utilities.</p>
 <p>The Linux shell is both a command-line interface (CLI) and a scripting language, allowing tasks to be done automatically and quickly. With the proper commands, the shell can repeat tasks with or without some modification as many times as we want.</p>
@@ -1101,8 +1093,7 @@
 <p>This is illustrating the location of the home directories for three users called “ibdc”, “rcb” and “ucsd”. We can see that each of their home directories is within another directory called home. And finally, the home directory is located in the root of the filesystem, represented by a / slash. The root is the top-most directory where everything for our operating system is stored in (it’s not possible to go “above” this special root directory).</p>
 <p>When we use the shell, we need to specify the location of files and directories using an “address” (similarly to how you specify an internet address to reach a given website). Let’s explore this from our shell terminal.</p>
 <p>First let’s find out where we are by running a command called pwd (which stands for “print working directory”). Directories are like places - at any time while we are using the shell we are in exactly one place, called our current working directory. Commands mostly read and write files in the current working directory, so knowing where you are before running a command is important.</p>
-<p>```bash
-pwd
+<p>pwd
 /home/ibdc</p>
 <p>Here, the computer’s response is /home/ibdc, which is the home directory, the default when opening a new shell terminal. The name “ibdc” is the username.
 If the user “rcb” was logged in, they would see /home/rcb as their default working directory.
@@ -1133,8 +1124,7 @@ Finally, we searched for files from the current location we were in. That’s wh
 One option that can sometimes be useful is to find and delete all the files. For example, the following command would delete all files with .txt extension:
 find . -type f -name "</em>.txt" -delete
 As you can imagine, this feature is very useful but also potentially dangerous as you may accidentally delete files you didn’t intend to. So, always make sure to run the command without the -delete option first to check that only the files you really want to delete are being matched.</p>
-<blockquote>
-<h3 id="summary_1">Summary</h3>
+<p>!!! tip ### " Summary"</p>
 <ul>
 <li>The filesystem is organised in a hierarchical way.</li>
 <li>Every user has a home directory, which on Linux is <code>/home/username/</code>.</li>
@@ -1157,7 +1147,6 @@ As you can imagine, this feature is very useful but also potentially dangerous a
 <li>We can operate on multiple files using the <code>*</code> <strong>wildcard</strong>, which matches “zero or more characters”. For example <code>ls *.txt</code> would list all files that have a <code>.txt</code> file extension.</li>
 <li>The <code>find</code> command can be used to find the location of files matching a specific name pattern.</li>
 </ul>
-</blockquote>
 <h2 id="3-file-operations">3. File Operations</h2>
 <h3 id="learning-objectives_1">Learning Objectives</h3>
 <ul>
@@ -1231,7 +1220,7 @@ rm -r test_dir/</p>
 <p>Given that there is no way to retrieve files deleted using the shell, rm -r should be used with great caution (you might consider adding the interactive option rm -r -i).
 To remove empty directories, we can also use the rmdir command. This is a safer option than rm -r, because it will never delete the directory if it contains files, giving us a chance to check whether we really want to delete all its contents.</p>
 <blockquote>
-<h3 id="summary_2">Summary</h3>
+<h3 id="summary_1">Summary</h3>
 <ul>
 <li>Directories can be created with the <code>mkdir</code> command.</li>
 <li>Files can be moved and/or renamed using the <code>mv</code> command.</li>
