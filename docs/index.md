@@ -29,8 +29,6 @@
 
 ![Image Description Goes Here](assets/img/1.png)
 ![Image Description Goes Here](assets/img/2.png)
-![Image Description Goes Here](assets/img/3.png)
-![Image Description Goes Here](assets/img/8.png)
 
 ## Introduction
 With the avant-garde technologies and constant evolution of scientific knowledge, biologists are faced with an increasing need for bioinformatics skills to deal with high-throughput data storage, retrieval, and analysis. Although several resources developed for such tasks have a graphical user interface, many operations can be more efficiently handled with command-line programs and utilities.
@@ -69,7 +67,7 @@ Linux architecture refers to the layered structure of the Linux operating system
 4. Hardware Layer: The hardware layer consists of physical components that execute commands and provide system resources. It includes RAM (Random Access Memory), HDD (Hard Disk Drive), CPU (Central Processing Unit), and input/output devices. This layer is responsible for interacting with the OS and providing the necessary resources for the system and applications to function properly. The Linux kernel and system libraries enable communication and control over these hardware components, ensuring that they work harmoniously together.
 
 5. System Utility: System utilities are essential tools and programs provided by the Operating System to manage and configure various aspects of the system. These utilities perform tasks such as installing software, configuring network settings, monitoring system performance, managing users and permissions, and much more. System utilities simplify system administration tasks, making it easier for users to maintain their Linux systems efficiently.
----
+
 
 ## The Terminal
 
@@ -122,12 +120,16 @@ Because the FHS is the default filesystem layout on Linux machines, and each dir
 | `/usr` | applications and files that are mostly available for all users to access |
 | `/var` | variable files such as logs and databases |
 
-## The Linux Shell
 
-### Running Commands
-When the shell is first opened, you are presented with a prompt, indicating that the shell is waiting for input. A typical prompt on Linux may look like this: 
+![Image Description Goes Here](assets/img/8.png)
 
-`username@hostname:~$`
+
+1. The Linux Shell
+
+
+**Running Commands**: When the shell is first opened, you are presented with a prompt, indicating that the shell is waiting for input. A typical prompt on Linux may look like this: 
+
+**`username@hostname:~$`**
 
 * **username** represents the username of the current user.
 * **hostname** represents the name of the computer or system.
@@ -136,43 +138,45 @@ When the shell is first opened, you are presented with a prompt, indicating that
 
 After you type a command, you have to press the **Enter ↲** key to execute it. So let’s try our first command, `ls` which is short for “listing”. This command will list the contents of the current directory.
 
-### Command Options
-Commands can often change their behaviour with additional options. Consider the command below as a general example, which we will dissect into its component parts:
-`ls  -l  --sort  time  Documents/`
+**Command Options**: Commands can often change their behaviour with additional options. Consider the command below as a general example, which we will dissect into its component parts:
 
-* **ls** is the command.
-* **-l** is an argument that “switches on” a particular behaviour of the program. In this case it lists the files in a “long” format. These kind of arguments are also called an option, switch or flag. Options either start with a single dash (`-`) or two dashes (`--`).
-* **--sort** is also an argument, but it needs a value to indicate how it should change the behaviour of the program. In this case, the option changes how the files are sorted (in our example we specified ‘time’ to sort files by the time they were created or modified).
-* **Documents** is a positional argument, which comes at the end of the command. This argument tells the command what to operate on (e.g. files and directories).
+![Image Description Goes Here](assets/img/6.png)
+
+**`ls  -l  --sort  time  Documents/`**
+
+* <i style="color:blue;">ls</i> is the command.
+* <i style="color:blue;">-l</i> is an argument that “switches on” a particular behaviour of the program. In this case it lists the files in a “long” format. These kind of arguments are also called an option, switch or flag. Options either start with a single dash (`-`) or two dashes (`--`).
+* <i style="color:blue;">--sort</i> is also an argument, but it needs a value to indicate how it should change the behaviour of the program. In this case, the option changes how the files are sorted (in our example we specified ‘time’ to sort files by the time they were created or modified).
+<i style="color:blue;">Documents</i> is a positional argument, which comes at the end of the command. This argument tells the command what to operate on (e.g. files and directories).
 
 A command can be called with more than one option and more than one argument: but a command doesn’t always require an argument or an option.
 
-Each part is separated by spaces: if you omit the space between `ls` and `-l` the shell will look for a command called `ls-l`, which doesn’t exist. Also, capitalisation can be important: `ls -r` is different to `ls -R`.
+Each part is separated by spaces: if you omit the space between <i style="color:blue;">ls</i> and <i style="color:blue;">-l</i> the shell will look for a command called <i style="color:blue;">ls- l</i>, which doesn’t exist. Also, capitalisation can be important: <i style="color:blue;">ls -r</i> is different to <i style="color:blue;">ls -R</i>.
 
-So, our command above gives us a long listing of files and directories in the directory `Documents`.
+So, our command above gives us a long listing of files and directories in the directory <i style="color:blue;">Documents</i>.
 
-### Getting help
-`ls` has lots of other options. There are two common ways to find out how to use a command and what options it accepts:
+**Getting help:** <i style="color:blue;">ls</i> has lots of other options. There are two common ways to find out how to use a command and what options it accepts:
 
-1.  We can pass a `--help` option to the command, such as `ls --help`.
-2.  We can read its manual with `man`, such as `man ls`. To exit the man page you can type `q` (for “quit”).
+1.  We can pass a <i style="color:blue;">--help</i> option to the command, such as <i style="color:blue;">ls --help</i>.
+2.  We can read its manual with <i style="color:blue;">man</i>, such as <i style="color:blue;">man ls</i>. To exit the man page you can type **q** (for “quit”).
 
 
-> ### Summary
-> * The **Linux shell (command line)** allows running complex operations with a few commands, interacting with **high-performance computing servers**, and writing reproducible analysis in scripts.
-> * The **basic syntax** of a command is: `command -options argument`.
-> * For example: `ls -l Documents` would list the contents of the Documents directory in a **long format**.
-> * To find the options available with a given program, we can use the `--help` function or (in some cases) the `man` command. 
-> * For example: `ls --help` or `man ls`.
+### **Summary**
+* The **Linux shell (command line)** allows running complex operations with a few commands, interacting with **high-performance computing servers**, and writing reproducible analysis in scripts.
+* The **basic syntax** of a command is: `command -options argument`.
+* For example: `ls -l Documents` would list the contents of the Documents directory in a **long format**.
+* To find the options available with a given program, we can use the `--help` function or (in some cases) the `man` command. 
+* For example: `ls --help` or `man ls`.
 
+---
 
 ## 2. Navigating the filesystem
 
 ### Learning Objectives
 * Understand the hierarchical structure of filesystems and how the location of files and directories is specified.
 * Distinguish between absolute and relative paths.
-* Recognise when / is used to specify the root directory or to separate directories.
-* Navigate the filesystem using the commands `pwd`, `ls` and `cd`.
+* Recognise when <i style="color:blue;">/</i> is used to specify the root directory or to separate directories.
+* Navigate the filesystem using the commands <i style="color:blue;">pwd, ls </i> and <i style="color:blue;">cd</i>.
 * Make use of the `*` wildcard to match files by patterns.
 * Use the `find` command to effectively search for files or directories.
 
