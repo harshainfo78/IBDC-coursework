@@ -1,0 +1,9 @@
+site_name: IBDC-coursework
+site_url: https://USERNAME.github.io/IBDC-coursework/
+
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+
