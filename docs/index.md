@@ -124,7 +124,7 @@ Because the FHS is the default filesystem layout on Linux machines, and each dir
 ![Image Description Goes Here](assets/img/8.png)
 
 
-1. The Linux Shell
+## **1. The Linux Shell**
 
 
 **Running Commands**: When the shell is first opened, you are presented with a prompt, indicating that the shell is waiting for input. A typical prompt on Linux may look like this: 
@@ -161,7 +161,7 @@ So, our command above gives us a long listing of files and directories in the di
 2.  We can read its manual with <i style="color:blue;">man</i>, such as <i style="color:blue;">man ls</i>. To exit the man page you can type **q** (for “quit”).
 
 
-!!! **Summary**  
+!!! tip "Summary" 
 
 
 * The Linux shell (command line) allows running complex operations with a few commands, interact with high-performance computing servers and write reproducible analysis in scripts.
@@ -256,7 +256,7 @@ One option that can sometimes be useful is to find and delete all the files. For
 As you can imagine, this feature is very useful but also potentially dangerous as you may accidentally delete files you didn’t intend to. So, always make sure to run the command without the <i style="color:blue;">-delete</i> option first to check that only the files you really want to delete are being matched.
 
 
-!!! **"Summary"** 
+!!! tip "Summary"
 
 * The filesystem is organised in a hierarchical way.
 * Every user has a home directory, which on Linux is `/home/username/`.
@@ -380,9 +380,8 @@ Given that there is no way to retrieve files deleted using the shell, <i style="
 
 To remove empty directories, we can also use the <i style="color:blue;">rmdir</i> command. This is a safer option than <i style="color:blue;">rm -r</i>, because it will never delete the directory if it contains files, giving us a chance to check whether we really want to delete all its contents.
 
-!!! tip
- ### Summary
- 
+!!! tip "Summary"
+
  * Directories can be created with the `mkdir` command.
  * Files can be moved and/or renamed using the `mv` command.
  * **Data loss warning:** If files of the same name exist in the destination, they will be  verwritten.
