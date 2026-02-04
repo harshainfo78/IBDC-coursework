@@ -26,8 +26,8 @@
 * PBS script and Job management
 
 ---
-<img src="assets/images/1.png" width="300">
-<img src="assets/images/2.png" width="300">
+![Image Description Goes Here](assets/img/1.png)
+![Image Description Goes Here](assets/img/2.png)
 
 ## Introduction
 With the avant-garde technologies and constant evolution of scientific knowledge, biologists are faced with an increasing need for bioinformatics skills to deal with high-throughput data storage, retrieval, and analysis. Although several resources developed for such tasks have a graphical user interface, many operations can be more efficiently handled with command-line programs and utilities.
