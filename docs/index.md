@@ -9,134 +9,97 @@
 * The Linux Shell
 * Navigating the filesystem
 * File Operations
+* Working with text
+* Combining commands (awk, sed, grep)
+* Shell script
+* Shell Programming
+* Installation of Tools
+* Linux Command Reference
+
+***HPC:***
+
+* Introduction
+* HPC System Architecture
+* Login to IBDC-HPC
+* IBDC-HPC functionalities
+* Installation of Tools
+* PBS script and Job management
 
 ---
 
 ![Image Description Goes Here](assets/img/1.png)
 ![Image Description Goes Here](assets/img/2.png)
 ![Image Description Goes Here](assets/img/3.png)
-![Image Description Goes Here](assets/img/4.png)
-![Image Description Goes Here](assets/img/5.png)
-![Image Description Goes Here](assets/img/6.png)
-![Image Description Goes Here](assets/img/7.png)
 ![Image Description Goes Here](assets/img/8.png)
-![Image Description Goes Here](assets/img/9.png)
-![Image Description Goes Here](assets/img/10.png)
-![Image Description Goes Here](assets/img/12.png)
-![Image Description Goes Here](assets/img/13.png)
-![Image Description Goes Here](assets/img/15.png)
-![Image Description Goes Here](assets/img/16.png)
-![Image Description Goes Here](assets/img/17.png)
 
 ## Introduction
 With the avant-garde technologies and constant evolution of scientific knowledge, biologists are faced with an increasing need for bioinformatics skills to deal with high-throughput data storage, retrieval, and analysis. Although several resources developed for such tasks have a graphical user interface, many operations can be more efficiently handled with command-line programs and utilities.
 
 The Linux shell is both a command-line interface (CLI) and a scripting language, allowing tasks to be done automatically and quickly. With the proper commands, the shell can repeat tasks with or without some modification as many times as we want.
 
-Linux is a family of free and open-source operating systems based on the Linux kernel. The **Linux Kernel** is like the brain of the operating system because it manages how the computer interacts with its hardware and resources. But the Linux Kernel alone is not enough to make a complete operating system. 
 
-To create a full and functional system, the Linux Kernel is combined with a collection of software packages and utilities, which are together called **Linux distributions**. These distributions make the Linux Operating System ready for users to run their applications and perform tasks on their computers securely and effectively. Operating systems based on Linux are known as Linux distributions or distros. 
+**A brief history of Linux**
 
-### Examples of Distributions
-* Debian
-* Ubuntu
-* Fedora
-* CentOS
-* Gentoo
-* Arch Linux
-* Red Hat Enterprise Linux (RHEL)
+Linux is an operating system that evolved from a kernel created by Linus Torvalds when he was a student at the University of Helsinki in 1991. When Linus Torvalds was studying at the University of Helsinki, he was using a version of the UNIX operating system called 'Minix'. Linus and other users sent requests for modifications and improvements to Minix's creator, Andrew Tanenbaum, but he felt that they weren't necessary. That's when Linus decided to create his own operating system that would take into account users' comments and suggestions for improvements. 
 
----
+**Introduction**
 
-## A Brief History of Linux
-> Linux is an operating system that evolved from a kernel created by **Linus Torvalds** when he was a student at the University of Helsinki in 1991. 
+Linux is a family of free and open-source operating systems based on the Linux kernel. The Linux Kernel is like the brain of the operating system because it manages how the computer interacts with its hardware and resources. But the Linux Kernel alone is not enough to make a complete operating system. To create a full and functional system, the Linux Kernel is combined with a collection of software packages and utilities, which are together called Linux distributions. These distributions make the Linux Operating System ready for users to run their applications and perform tasks on their computers securely and effectively. Operating systems based on Linux are known as Linux distributions or distros. Examples include Debian, Ubuntu, Fedora, CentOS, Gentoo, Arch Linux, Red Hat Enterprise Linux (RHEL), and many others.
 
-When Linus Torvalds was studying at the University of Helsinki, he was using a version of the UNIX operating system called 'Minix'. Linus and other users sent requests for modifications and improvements to Minix's creator, Andrew Tanenbaum, but he felt that they weren't necessary. That's when Linus decided to create his own operating system that would take into account users' comments and suggestions for improvements. 
+**Importance of Linux**
 
----
-
-## Importance of Linux
 Linux is a free, open-source operating system known for its flexibility, stability, and strong security. It is widely used in personal computing, server environments, and enterprise systems because of its performance and customization capabilities.
 
-* **Security:** Offers high security and stability, making it ideal for servers and development work.
-* **Open Source:** Fully open-source and free to use, modify, and distribute.
-* **Flexibility:** Highly flexible and customizable to suit different user and industry needs.
-* **Community:** Supported by a large global community and a vast software ecosystem.
+- ==Offers high security and stability, making it ideal for servers and development work.==
+- ==Fully open-source and free to use, modify, and distribute.==
+- ==Highly flexible and customizable to suit different user and industry needs.==
+- ==Supported by a large global community and a vast software ecosystem.==
 
----
 
-## Architecture of Linux
+**Architecture of Linux**
 Linux architecture refers to the layered structure of the Linux operating system that defines how its components - such as the kernel, shell, system libraries, and hardware interact with each other to manage system resources and execute user programs efficiently.
 
-| Layer | Function |
-| :--- | :--- |
-| **Hardware** | Physical components like CPU, RAM, and Disk. |
-| **Kernel** | Core of the OS; manages hardware communication. |
-| **Shell** | Interface that interprets commands for the Kernel. |
-| **Utilities** | Software and tools that provide OS functionality. |
+![Image Description Goes Here](assets/img/4.png)
 
+1. Kernel: The kernel is the core of the Linux operating system that manages hardware resources and controls communication between software and hardware. Handles process management, memory, and device control. Prevents conflicts between multiple running programs.
+2. System Libraries: System libraries provide essential functions that allow applications to interact with the kernel without needing to access it directly. These libraries contain pre-written code that applications can use to perform specific tasks. By using these libraries, one can save time and effort, as they don’t need to write the same code repeatedly. System libraries act as an interface between applications and the kernel, providing a standardized and efficient way for applications to interact with the underlying system.
 
+3. Shell: The shell is the command-line interface that allows users to communicate with the operating system by entering commands. It interprets and executes user commands and serves as a bridge between the user and the kernel, forwarding the user’s requests to the kernel for processing. It provides a convenient way for users to perform various tasks, such as running programs, managing files, and configuring the system.
 
-## Deep Dive into Linux Architecture
+4. Hardware Layer: The hardware layer consists of physical components that execute commands and provide system resources. It includes RAM (Random Access Memory), HDD (Hard Disk Drive), CPU (Central Processing Unit), and input/output devices. This layer is responsible for interacting with the OS and providing the necessary resources for the system and applications to function properly. The Linux kernel and system libraries enable communication and control over these hardware components, ensuring that they work harmoniously together.
 
-
-
-### 1. Kernel
-The kernel is the core of the Linux operating system that manages hardware resources and controls communication between software and hardware. 
-* **Management:** Handles process management, memory, and device control.
-* **Security:** Prevents conflicts between multiple running programs.
-
-### 2. System Libraries
-System libraries provide essential functions that allow applications to interact with the kernel without needing to access it directly. 
-* **Efficiency:** These libraries contain pre-written code that applications can use to perform specific tasks, saving developers time and effort.
-* **Interface:** They act as a bridge between applications and the kernel, providing a standardized and efficient way to interact with the underlying system.
-
-### 3. Shell
-The shell is the command-line interface that allows users to communicate with the operating system by entering commands. 
-* **Bridge:** It interprets and executes user commands, forwarding requests to the kernel for processing.
-* **Utility:** Provides a convenient way to run programs, manage files, and configure the system.
-
-### 4. Hardware Layer
-The hardware layer consists of physical components that execute commands and provide system resources. 
-* **Components:** Includes RAM (Random Access Memory), HDD (Hard Disk Drive), CPU (Central Processing Unit), and I/O devices.
-* **Interaction:** The Linux kernel and system libraries enable communication and control over these components, ensuring they work harmoniously.
-
-### 5. System Utility
-System utilities are essential tools and programs provided by the Operating System to manage and configure various aspects of the system. 
-* **Administrative Tasks:** Installing software, configuring network settings, and monitoring system performance.
-* **Management:** Managing users and file permissions to maintain system efficiency.
-
+5. System Utility: System utilities are essential tools and programs provided by the Operating System to manage and configure various aspects of the system. These utilities perform tasks such as installing software, configuring network settings, monitoring system performance, managing users and permissions, and much more. System utilities simplify system administration tasks, making it easier for users to maintain their Linux systems efficiently.
 ---
 
 ## The Terminal
 
-While the terms "terminal," "shell," and "command line interface" are often used interchangeably, there are subtle differences:
+The terms “terminal,” “shell,” and “command line interface” are often used interchangeably, but there are subtle differences between them.
 
-!!! info "Defining the Workspace"
-    * **Terminal:** An input and output environment that presents a text-only window running a shell.
-    * **Shell:** A program that exposes the computer’s operating system to a user or program (a command line interpreter).
-    * **Command Line Interface (CLI):** The user interface managed by the shell which processes commands and outputs results.
+- ==A shell is a program that exposes the computer’s operating system to a user or program. In Linux systems, the shell presented in a terminal is a command line interpreter.==
+- ==A terminal is an input and output environment that presents a text-only window running a shell.==
+- ==A command line interface is a user interface (managed by a command line interpreter program) which processes commands to a computer program and outputs the results.==
 
-In the context of Linux, "opening a terminal" generally refers to the environment where you run commands and see the results printed out.
+When it refers to one of these three terms in the context of Linux, it generally means a terminal environment where users can run commands and see the results printed out to the terminal.
 
+![Image Description Goes Here](assets/img/5.png)
 
 The terminal is interactive: users can specify commands to run and the terminal outputs the results of those commands. To execute any command, users need to type it into the prompt and press ENTER.
 
 When accessing a cloud server, most often it is accessed through a terminal shell. Although personal computers that run Linux often come with the kind of graphical desktop environment familiar to most computer users, it is often more efficient or practical to perform certain tasks through commands entered into the terminal.
 
-## Linux File Hierarchy Structure
+**Linux File Hierarchy Structure**
 
 The Linux File Hierarchy Structure or the Filesystem Hierarchy Standard (FHS) defines the directory structure and directory contents in Unix-like operating systems. It is maintained by the Linux Foundation. Nearly all Linux distributions are compliant with this universal standard filesystem directory structure. The FHS defines a set of directories, each of which serve their own special function.
 
-
-
 The forward slash (/) is used to indicate the root directory in the filesystem hierarchy defined by the FHS, all files and directories appear under the root directory /, even if they are stored on different physical or virtual devices.
 
-When a user logs in to the shell, they are brought to their own user directory, stored within /home/. This is referred to as the user’s home directory. The FHS defines /home/ as containing the home directories for regular users.
+When a user logs in to the shell, they are brought to their own user directory, stored within **/home/**. This is referred to as the user’s *home directory*. The FHS defines **/home/** as containing the home directories for regular users.
 
-The root user has its own home directory specified by the FHS: /root/. Note that / is referred to as the “root directory”, and that it is different from root/, which is stored within /.
+The **root** user has its own home directory specified by the FHS: **/root/**. Note that / is referred to as the **“root directory”**, and that it is different from **root/**, which is stored within /.
 
 Because the FHS is the default filesystem layout on Linux machines, and each directory within it is included to serve a specific purpose, it simplifies the process of organizing files by their function. The following is a listing of common directories that are directly under the root (/) directory:
+
+
 
 | Directory | Description |
 | :--- | :--- |
@@ -285,6 +248,7 @@ As you can imagine, this feature is very useful but also potentially dangerous a
  * We can operate on multiple files using the `*` **wildcard**, which matches “zero or more characters”. For example `ls *.txt` would list all files that have a `.txt` file extension.
  * The `find` command can be used to find the location of files matching a specific name pattern.
 
+---
 
 ## 3. File Operations
 

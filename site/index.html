@@ -848,23 +848,28 @@
 <li>The Linux Shell</li>
 <li>Navigating the filesystem</li>
 <li>File Operations</li>
+<li>Working with text</li>
+<li>Combining commands (awk, sed, grep)</li>
+<li>Shell script</li>
+<li>Shell Programming</li>
+<li>Installation of Tools</li>
+<li>Linux Command Reference</li>
+</ul>
+<p>HPC:</p>
+<ul>
+<li>Introduction</li>
+<li>HPC System Architecture</li>
+<li>Login to IBDC-HPC</li>
+<li>IBDC-HPC functionalities</li>
+<li>Installation of Tools</li>
+<li>PBS script and Job management</li>
 </ul>
 <hr />
 <p><img alt="Image Description Goes Here" src="assets/img/1.png" />
 <img alt="Image Description Goes Here" src="assets/img/2.png" />
 <img alt="Image Description Goes Here" src="assets/img/3.png" />
 <img alt="Image Description Goes Here" src="assets/img/4.png" />
-<img alt="Image Description Goes Here" src="assets/img/5.png" />
-<img alt="Image Description Goes Here" src="assets/img/6.png" />
-<img alt="Image Description Goes Here" src="assets/img/7.png" />
-<img alt="Image Description Goes Here" src="assets/img/8.png" />
-<img alt="Image Description Goes Here" src="assets/img/9.png" />
-<img alt="Image Description Goes Here" src="assets/img/10.png" />
-<img alt="Image Description Goes Here" src="assets/img/12.png" />
-<img alt="Image Description Goes Here" src="assets/img/13.png" />
-<img alt="Image Description Goes Here" src="assets/img/15.png" />
-<img alt="Image Description Goes Here" src="assets/img/16.png" />
-<img alt="Image Description Goes Here" src="assets/img/17.png" /></p>
+<img alt="Image Description Goes Here" src="assets/img/8.png" /></p>
 <h2 id="introduction">Introduction</h2>
 <p>With the avant-garde technologies and constant evolution of scientific knowledge, biologists are faced with an increasing need for bioinformatics skills to deal with high-throughput data storage, retrieval, and analysis. Although several resources developed for such tasks have a graphical user interface, many operations can be more efficiently handled with command-line programs and utilities.</p>
 <p>The Linux shell is both a command-line interface (CLI) and a scripting language, allowing tasks to be done automatically and quickly. With the proper commands, the shell can repeat tasks with or without some modification as many times as we want.</p>
@@ -948,10 +953,14 @@
 <hr />
 <h2 id="the-terminal">The Terminal</h2>
 <p>While the terms "terminal," "shell," and "command line interface" are often used interchangeably, there are subtle differences:</p>
-<p>!!! info "Defining the Workspace"
-    * <strong>Terminal:</strong> An input and output environment that presents a text-only window running a shell.
-    * <strong>Shell:</strong> A program that exposes the computer’s operating system to a user or program (a command line interpreter).
-    * <strong>Command Line Interface (CLI):</strong> The user interface managed by the shell which processes commands and outputs results.</p>
+<div class="admonition info">
+<p class="admonition-title">Defining the Workspace</p>
+<ul>
+<li><strong>Terminal:</strong> An input and output environment that presents a text-only window running a shell.</li>
+<li><strong>Shell:</strong> A program that exposes the computer’s operating system to a user or program (a command line interpreter).</li>
+<li><strong>Command Line Interface (CLI):</strong> The user interface managed by the shell which processes commands and outputs results.</li>
+</ul>
+</div>
 <p>In the context of Linux, "opening a terminal" generally refers to the environment where you run commands and see the results printed out.</p>
 <p>The terminal is interactive: users can specify commands to run and the terminal outputs the results of those commands. To execute any command, users need to type it into the prompt and press ENTER.</p>
 <p>When accessing a cloud server, most often it is accessed through a terminal shell. Although personal computers that run Linux often come with the kind of graphical desktop environment familiar to most computer users, it is often more efficient or practical to perform certain tasks through commands entered into the terminal.</p>
@@ -1151,6 +1160,7 @@ As you can imagine, this feature is very useful but also potentially dangerous a
 <li>We can operate on multiple files using the <code>*</code> <strong>wildcard</strong>, which matches “zero or more characters”. For example <code>ls *.txt</code> would list all files that have a <code>.txt</code> file extension.</li>
 <li>The <code>find</code> command can be used to find the location of files matching a specific name pattern.</li>
 </ul>
+<hr />
 <h2 id="3-file-operations">3. File Operations</h2>
 <h3 id="learning-objectives_1">Learning Objectives</h3>
 <ul>
