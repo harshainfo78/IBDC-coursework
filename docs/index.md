@@ -68,14 +68,14 @@ Linux architecture refers to the layered structure of the Linux operating system
 
 5. System Utility: System utilities are essential tools and programs provided by the Operating System to manage and configure various aspects of the system. These utilities perform tasks such as installing software, configuring network settings, monitoring system performance, managing users and permissions, and much more. System utilities simplify system administration tasks, making it easier for users to maintain their Linux systems efficiently.
 
-
-## The Terminal
+---
+## **The Terminal**
 
 The terms “terminal,” “shell,” and “command line interface” are often used interchangeably, but there are subtle differences between them.
 
-- ==A shell is a program that exposes the computer’s operating system to a user or program. In Linux systems, the shell presented in a terminal is a command line interpreter.==
-- ==A terminal is an input and output environment that presents a text-only window running a shell.==
-- ==A command line interface is a user interface (managed by a command line interpreter program) which processes commands to a computer program and outputs the results.==
+* A shell is a program that exposes the computer’s operating system to a user or program. In Linux systems, the shell presented in a terminal is a command line interpreter.
+* A terminal is an input and output environment that presents a text-only window running a shell.
+* A command line interface is a user interface (managed by a command line interpreter program) which processes commands to a computer program and outputs the results.
 
 When it refers to one of these three terms in the context of Linux, it generally means a terminal environment where users can run commands and see the results printed out to the terminal.
 
@@ -161,12 +161,14 @@ So, our command above gives us a long listing of files and directories in the di
 2.  We can read its manual with <i style="color:blue;">man</i>, such as <i style="color:blue;">man ls</i>. To exit the man page you can type **q** (for “quit”).
 
 
-### **Summary**
-* The **Linux shell (command line)** allows running complex operations with a few commands, interacting with **high-performance computing servers**, and writing reproducible analysis in scripts.
-* The **basic syntax** of a command is: `command -options argument`.
-* For example: `ls -l Documents` would list the contents of the Documents directory in a **long format**.
-* To find the options available with a given program, we can use the `--help` function or (in some cases) the `man` command. 
-* For example: `ls --help` or `man ls`.
+!!! tip  
+**Summary**
+
+* The Linux shell (command line) allows running complex operations with a few commands, interact with high-performance computing servers and write reproducible analysis in scripts.
+* The basic syntax of a command is: <i style="color:blue;">command -options argument</i>.
+For example, <i style="color:blue;">ls -l Documents</i> would list the contents of the <i style="color:blue;">Documents</i> directory in a long format.
+* To find the options available with a given program we can use the <i style="color:blue;">--help</i> function or (in some cases) the <i style="color:blue;">man</i> command.
+For example: <i style="color:blue;">ls --help</i> or <i style="color:blue;">man ls</i>.
 
 ---
 
@@ -177,63 +179,85 @@ So, our command above gives us a long listing of files and directories in the di
 * Distinguish between absolute and relative paths.
 * Recognise when <i style="color:blue;">/</i> is used to specify the root directory or to separate directories.
 * Navigate the filesystem using the commands <i style="color:blue;">pwd, ls </i> and <i style="color:blue;">cd</i>.
-* Make use of the `*` wildcard to match files by patterns.
-* Use the `find` command to effectively search for files or directories.
+* Make use of the <i style="color:blue;">*</i> wildcard to match files by patterns.
+* Use the <i style="color:blue;">find</i> command to effectively search for files or directories.
 
-### Linux Filesystem
-The part of the operating system responsible for managing files and directories is called the filesystem. It organizes our data into files and directories (also called folders), which hold files or other directories. These directories are organised in a hierarchical way, which we can represent as a tree.
+**Linux Filesystem**: The part of the operating system responsible for managing files and directories is called the filesystem. It organizes our data into files and directories (also called folders), which hold files or other directories. These directories are organised in a hierarchical way, which we can represent as a tree.
 
+![Image Description Goes Here](assets/img/7.png)
 
-
-
-This is illustrating the location of the home directories for three users called “ibdc”, “rcb” and “ucsd”. We can see that each of their home directories is within another directory called home. And finally, the home directory is located in the root of the filesystem, represented by a / slash. The root is the top-most directory where everything for our operating system is stored in (it’s not possible to go “above” this special root directory).
-
+This is illustrating the location of the home directories for three users called “ibdc”, “rcb” and “ucsd”. We can see that each of their home directories is within another directory called <i style="color:blue;">home</i>. And finally, the home directory is located in the root of the filesystem, represented by a <i style="color:blue;">/</i> slash. The root is the top-most directory where everything for our operating system is stored in (it’s not possible to go “above” this special root directory).
 
 
 When we use the shell, we need to specify the location of files and directories using an “address” (similarly to how you specify an internet address to reach a given website). Let’s explore this from our shell terminal.
 
-First let’s find out where we are by running a command called pwd (which stands for “print working directory”). Directories are like places - at any time while we are using the shell we are in exactly one place, called our current working directory. Commands mostly read and write files in the current working directory, so knowing where you are before running a command is important.
+First let’s find out where we are by running a command called <i style="color:blue;">pwd</i> (which stands for “print working directory”). Directories are like places - at any time while we are using the shell we are in exactly one place, called our current working directory. Commands mostly read and write files in the current working directory, so knowing where you are before running a command is important.
 
-pwd
-/home/ibdc
+**pwd**
+
+**/home/ibdc**
 
 
-Here, the computer’s response is /home/ibdc, which is the home directory, the default when opening a new shell terminal. The name “ibdc” is the username.
-If the user “rcb” was logged in, they would see /home/rcb as their default working directory.
+Here, the computer’s response is <i style="color:blue;">/home/ibdc</i>, which is the home directory, the default when opening a new shell terminal. The name “ibdc” is the username.
+If the user “rcb” was logged in, they would see <i style="color:blue;">/home/ibdc</i> as their default working directory.
+
 Notice how the location of this folder is specified:
-/ at the start specifies the root of the filesystem.
-home specifies the folder “home” within the root.
-/ is a separator between the “home” folder and the next folder.
+
+* <i style="color:blue;">/</i> at the start specifies the root of the filesystem.
+* <i style="color:blue;">home</i> specifies the folder “home” within the root.
+*  <i style="color:blue;">/</i>is a separator between the “home” folder and the next folder.
+
 
 The way of representing file or directory locations is called a path.
-The / slash - Notice that there are two meanings for the / character. When it appears at the beginning of a file or directory name, it refers to the root directory. When it appears inside a name, it’s a separator.
-Home directory variation - The home directory path will look different on different operating systems. For a user named “ucsd”, on a Mac it would look like /Users/ucsd, and on Windows C:\Users\ucsd.
-Listing files: We can see the content of our current directory by running ls, which stands for “listing”:
 
-Changing Directory: The command to change locations is cd (“change directory”) followed by a directory name to change our working directory.
-cd /home/ibdc/data
-We can check with pwd that we are in the correct directory. We can also run ls again to see the files within our current directory.
+
+**The / slash** - Notice that there are two meanings for the / character. When it appears at the beginning of a file or directory name, it refers to the root directory. When it appears inside a name, it’s a separator.
+
+**Home directory variation** - The home directory path will look different on different operating systems. For a user named “ucsd”, on a Mac it would look like /Users/ucsd, and on Windows C:\Users\ucsd.
+
+**Listing files**: We can see the content of our current directory by running ls, which stands for “listing”:
+
+**Changing Directory**: The command to change locations is cd (“change directory”) followed by a directory name to change our working directory.
+
+**cd /home/ibdc/data**
+
+We can check with <i style="color:blue;">pwd</i> that we are in the correct directory. We can also run ls again to see the files within our current directory.
+
 There are two ways to specify directory names:
-An absolute path includes the entire path (or location) from the root directory, which is indicated by a leading slash. The leading / tells the computer to follow the path from the root of the filesystem, so it always refers to exactly one directory, no matter where we are when we run the command.
-A relative path tries to find that location from where we are (our current directory), rather than from the root of the filesystem.
-The shell interprets the character ~ (tilde) at the start of a path to mean “the user’s home directory”. In our example the ~ is equivalent to /home/ibdc.
-We now know how to go down the directory tree, but how do we go up? cd can only see sub-directories inside your current directory. To move up one directory we need to use the special shortcut .. like this: cd ..
 
-Wildcards: Wildcards are special characters that can be used to access multiple files at once. The most commonly-used wildcard is *, which is used to match zero or more characters.
+* An absolute path includes the entire path (or location) from the root directory, which is indicated by a leading slash. The leading / tells the computer to follow the path from the root of the filesystem, so it always refers to exactly one directory, no matter where we are when we run the command.
+* A relative path tries to find that location from where we are (our current directory), rather than from the root of the filesystem.
+
+The shell interprets the character <i style="color:blue;">**~**</i> (tilde) at the start of a path to mean “the user’s home directory”. In our example the <i style="color:blue;">**~**</i> is equivalent to <i style="color:blue;">/home/ibdc</i>.
+
+We now know how to go *down* the directory tree, but how do we go up? cd can only see sub-directories inside your current directory. To move up one directory we need to use the special shortcut .. like this: **cd** ..
+
+**Wildcards**: Wildcards are special characters that can be used to access multiple files at once. The most commonly-used wildcard is *, which is used to match zero or more characters.
 
 
-*.pdb matches every file that ends with ‘.pdb’ extension.
-Another common wildcard is ?, which matches any character exactly once.
-Finding Files: Often, it’s useful to be able to find files that have a particular pattern in their name. We can use the find command to achieve this. Here is an example, where we try to find all the text files that exist in the working folder:
-find . -type f -name "*.txt"
-In this case, we used the option -type f to only find files with the given name. We could use the option -type d if we wanted to instead find directories only. If we wanted to find both files and directories, then we can omit this option.
-We used -name to specify the name of the file we wanted to search for. Similarly to ls, you can use the * wildcard to match any number of characters. In our example, we used *.txt to find all files with the .txt file extension.
-Finally, we searched for files from the current location we were in. That’s what the . in the command above means: search for files from the current directory. If we wanted to find files in a different directory without having to cd into it first, we could replace . with the name/path of the directory we want to search from. 
-One option that can sometimes be useful is to find and delete all the files. For example, the following command would delete all files with .txt extension:
-find . -type f -name "*.txt" -delete
-As you can imagine, this feature is very useful but also potentially dangerous as you may accidentally delete files you didn’t intend to. So, always make sure to run the command without the -delete option first to check that only the files you really want to delete are being matched.
+<i style="color:blue;">*.pdb</i> matches every file that ends with ‘.pdb’ extension.
 
-!!! tip ### " Summary"
+Another common wildcard is <i style="color:blue;">?</i>, which matches any character exactly once.
+
+**Finding Files**: Often, it’s useful to be able to find files that have a particular pattern in their name. We can use the find command to achieve this. Here is an example, where we try to find all the text files that exist in the working folder:
+
+**find . -type f -name "*.txt"**
+
+In this case, we used the option <i style="color:blue;">?</i> to only find files with the given name. We could use the option <i style="color:blue;">?</i> if we wanted to instead find directories only. If we wanted to find both files and directories, then we can omit this option.
+
+We used <i style="color:blue;">-name</i> to specify the name of the file we wanted to search for. Similarly to <i style="color:blue;">8</i>, you can use the * wildcard to match *any number of characters*. In our example, we used <i style="color:blue;">.txt</i> to find all files with the .txt file extension.
+
+Finally, we searched for files from the current location we were in. That’s what the . in the command above means: search for files *from the current directory*. If we wanted to find files in a different directory without having to <i style="color:blue;">cd</i> into it first, we could replace . with the name/path of the directory we want to search from. 
+
+One option that can sometimes be useful is to find and delete all the files. For example, the following command would delete all files with <i style="color:blue;">.txt</i> extension:
+
+**find . -type f -name "*.txt" -delete**
+
+As you can imagine, this feature is very useful but also potentially dangerous as you may accidentally delete files you didn’t intend to. So, always make sure to run the command without the <i style="color:blue;">-delete</i> option first to check that only the files you really want to delete are being matched.
+
+
+!!! tip 
+### **"Summary"**
 
 * The filesystem is organised in a hierarchical way.
 * Every user has a home directory, which on Linux is `/home/username/`.
@@ -254,111 +278,120 @@ As you can imagine, this feature is very useful but also potentially dangerous a
 
 ---
 
-## 3. File Operations
+## **3. File Operations**
 
 ### Learning Objectives
 
 * Distinguish between copying and moving files.
 * Recognise how accidental and irreversible data loss may occur when moving or copying files.
-* Create, move, copy and remove files and directories using the commands `mkdir`, `mv`, `cp`, `rm` and `rmdir`.
+* Create, move, copy and remove files and directories using the commands <i style="color:blue;">mkdir, mv, cp, rm</i> and <i style="color:blue;">rmdir</i>.
 
-### Creating directories
-We now know how to explore files and directories, but how do we create them in the first place? First, we should see where we are and what we already have. Let’s go to one directory and use `ls` to see what it contains:
+**Creating directories**: We now know how to explore files and directories, but how do we create them in the first place? First, we should see where we are and what we already have. Let’s go to one directory and use `ls` to see what it contains:
 
-```bash
-cd ~/ibdc_workshop/working_files/
-ls
 
-Now, let’s create a new directory called test_files using the command mkdir (“make directory”):
-Bash
-mkdir test_files
+**cd ~/ibdc_workshop/working_files/**
+
+**ls**
+
+Now, let’s create a new directory called <i style="color:blue;">test_files</i> using the command <i style="color:blue;">mkdir</i> (“make directory”):
+
+**mkdir test_files**
 
 The new directory is created in the current working directory and use ls to see the contents.
-Note that using the shell to create a directory is no different than using a file explorer. If you open the current directory using your operating system’s graphical file explorer, the results directory will appear there too. While the shell and the file explorer are two different ways of interacting with the files, the files and directories themselves are the same.
 
-> ### Good naming conventions in linux
->
-> Complicated names of files and directories can make your life painful when working on the command line.
-> Here are some useful tips for naming your files:
->
-> * **Don’t use spaces.**
->   Spaces can make a name more meaningful, but since spaces are used to separate arguments on the command line it is better to avoid them in names of files and directories. You can use - or _ instead (e.g. `test_files/` rather than `test files/`).
-> * **Don’t begin the name with - (dash).**
->   Commands treat names starting with - as options.
-> * **Only use letters, numbers, . period, - hyphen and _ underscore.**
->   Many other characters (such as !, @, $, ", etc.) have special meanings on the command line and can cause your command to not work as expected or even lead to data loss.
-> * **If you need to refer to names of files or directories that have spaces or other special characters, you should surround the name in quotes (" ").**
+Note that using the shell to create a directory is no different than using a file explorer. If you open the current directory using your operating system’s graphical file explorer, the <i style="color:blue;">results</i> directory will appear there too. While the shell and the file explorer are two different ways of interacting with the files, the files and directories themselves are the same.
 
+**Good naming conventions in linux**: Complicated names of files and directories can make your life painful when working on the command line.
 
-Markdown
-### Moving & Renaming
-In our `~/ibdc-workshop/test_data/` directory we have a file called `6M0J.pdb`, which is a crystal structure file of SARS-CoV-2 spike receptor-binding domain bound with human ACE2 protein. Let’s move this file to the `working_data/` directory we created earlier, using the command `mv` (“move”):
+Here are some useful tips for naming your files:
 
-```bash
-mv 6M0J.pdb ../working_data/
+* **Don’t use spaces.**
+	Spaces can make a name more meaningful, but since spaces are used to separate arguments on 	the command line it is better to avoid them in names of files and directories. You can use - or _ instead (e.g. `test_files/` rather than `test files/`).
+* **Don’t begin the name with - (dash).**
+	Commands treat names starting with - as options.
+* **Only use letters, numbers, . period, - hyphen and _ underscore.**
+	 Many other characters (such as !, @, $, ", etc.) have special meanings on the command 	line and can cause your command to not work as expected or even lead to data loss.
+	 
+If you need to refer to names of files or directories that have spaces or other special characters, you should surround the name in quotes (<i style="color:blue;">" "</i>).
 
 
-The first argument tells mv what we’re “moving”, while the second is where it’s to go. In this case, we’re moving 6M0J.pdb to working_data/. We can check the file has moved there:
-Bash
-ls ../working_data/
+**Moving & Renaming**: In our **~/ibdc-workshop/test_data/`** directory we have a file called **6M0J.pdb**, which is a crystal structure file of SARS-CoV-2 spike receptor-binding domain bound with human ACE2 protein. Let’s move this file to the **working_data/** directory we created earlier, using the command `mv` (“move”):
+
+
+**mv 6M0J.pdb ../working_data/**
+
+
+The first argument tells <i style="color:blue;">mv</i> what we’re “moving”, while the second is where it’s to go. In this case, we’re moving 6M0J.pdb to working_data/. We can check the file has moved there:
+
+**ls ../working_data/**
 
 
 If this is not an informative name for our file we can change the name by using the mv command. Here’s how we could change a file’s name:
-Bash
-mv ../working_data/6M0J.pdb ../working_data/Spike-RBD_6M0J.pdb
+
+**mv ../working_data/6M0J.pdb ../working_data/Spike-RBD_6M0J.pdb**
 
 
-In this case, we are “moving” the file to the same place but with a different name. Be careful when specifying the target file name, since mv will silently overwrite any existing file with the same name, which could lead to data loss.
-The command mv also works with directories, and you can use it to move/rename an entire directory just as you use it to move an individual file.
+In this case, we are “moving” the file to the same place but with a different name. Be careful when specifying the target file name, since <i style="color:blue;">mv</i> will silently overwrite any existing file with the same name, which could lead to data loss.
 
-Copying Files and Directories
-The cp command works very much like mv, except it copies a file instead of moving it. For example, let’s make a copy of our .pdb file:
-Bash
-cp ~/ibdc-workshop/working_data/Spike-RBD_6M0J.pdb 6M0J_copy.pdb
+The command <i style="color:blue;">mv</i> also works with directories, and you can use it to move/rename an entire directory just as you use it to move an individual file.
 
+**Copying Files and Directories**:The <i style="color:blue;">cp</i> command works very much like <i style="color:blue;">mv</i>, except it copies a file instead of moving it. For example, let’s make a copy of our <i style="color:blue;">.pdb</i> file:
 
-Copy a File: cp source_file.txt destination_file.txt
-Copy File to Directory: cp file.txt /path/to/folder/
-Copy Directory (Recursive): cp -r source_dir destination_dir
-Copy Multiple Files: cp file1.txt file2.txt /destination/folder/
-Preserve Attributes: cp -a source/ destination/ (preserves structure, permissions, and timestamps)
-Verbose Mode: cp -v (shows files as they are copied)
-Prompt Before Overwriting: cp -i
-Copying within the same directory: cp file.txt file_copy.txt
-Copying to a different directory: cp file.txt /home/user/documents/
-Copying the contents of a folder: cp -r dir1/* dir2/
+**cp ~/ibdc-workshop/working_data/Spike-RBD_6M0J.pdb 6M0J_copy.pdb**
 
-Removing Files and Directories
-The Unix command used to remove or delete files is rm (“remove”). For example, let’s remove one of the files we copied earlier:
-Bash
-rm 6M0J_copy.pdb
+Copy a File: **cp source_file.txt destination_file.txt**
 
+Copy File to Directory: **cp file.txt /path/to/folder/**
 
-We can confirm the file is gone using ls. What if we try to remove the whole test_dir/ directory we created earlier:
-Bash
-rm test_dir/
-# rm: cannot remove 'test_dir/': Is a directory
+Copy Directory (Recursive): **cp -r source_dir destination_dir**
+
+Copy Multiple Files: **cp file1.txt file2.txt /destination/folder/**
+
+Preserve Attributes: **cp -a source/ destination/** (preserves structure, permissions, and timestamps)
+
+Verbose Mode: **cp -v** (shows files as they are copied)
+
+Prompt Before Overwriting: **cp -i**
+
+Copying within the same directory: **cp file.txt file_copy.txt**
+
+Copying to a different directory: **cp file.txt /home/user/documents/**
+
+Copying the contents of a folder: **cp -r dir1/* dir2/**
 
 
-We get an error. This happens because rm by default only works on files, not directories.
-rm can remove a directory and all its contents if we use the recursive option -r, and it will do so without any confirmation prompts:
-Bash
-rm -r test_dir/
+**Removing Files and Directories**:The Unix command used to remove or delete files is <i style="color:blue;">rm</i> (“remove”). For example, let’s remove one of the files we copied earlier:
+
+**rm 6M0J_copy.pdb**
+
+We can confirm the file is gone using <i style="color:blue;">ls</i>. What if we try to remove the whole <i style="color:blue;">test_dir/</i> directory we created earlier:
+
+**rm test_dir/**
+
+rm: cannot remove 'test_dir/': Is a directory
 
 
-Given that there is no way to retrieve files deleted using the shell, rm -r should be used with great caution (you might consider adding the interactive option rm -r -i).
-To remove empty directories, we can also use the rmdir command. This is a safer option than rm -r, because it will never delete the directory if it contains files, giving us a chance to check whether we really want to delete all its contents.
+We get an error. This happens because <i style="color:blue;">rm</i> by default only works on files, not directories.
+<i style="color:blue;">rm</i> can remove a directory and all its contents if we use the recursive option -r, and it will do so **without any confirmation prompts:**
 
-> ### Summary
-> 
-> * Directories can be created with the `mkdir` command.
-> * Files can be moved and/or renamed using the `mv` command.
-> * **Data loss warning:** If files of the same name exist in the destination, they will be overwritten.
-> * Files can be copied with the `cp` command.
-> * To copy an entire directory (and its contents) we need to use `cp -r` (the `-r` option will copy files recursively).
-> * **Data loss warning:** If files of the same name exist in the destination, they will be overwritten.
-> * Files can be removed with the `rm` command. To remove an entire directory (and its contents) we need to use `rm -r` (the `-r` option will remove files recursively).
-> * **Data loss warning:** Deleting files from the command line is permanent.
+**rm -r test_dir/**
+
+
+Given that there is no way to retrieve files deleted using the shell, <i style="color:blue;">rm -r</i> should be used with great caution (you might consider adding the interactive option <i style="color:blue;">rm -r -i</i>).
+
+To remove empty directories, we can also use the <i style="color:blue;">rmdir</i> command. This is a safer option than <i style="color:blue;">rm -r</i>, because it will never delete the directory if it contains files, giving us a chance to check whether we really want to delete all its contents.
+
+!!! tip
+ ### Summary
+ 
+ * Directories can be created with the `mkdir` command.
+ * Files can be moved and/or renamed using the `mv` command.
+ * **Data loss warning:** If files of the same name exist in the destination, they will be  verwritten.
+ * Files can be copied with the `cp` command.
+ * To copy an entire directory (and its contents) we need to use `cp -r` (the `-r` option will copy files recursively).
+ * **Data loss warning:** If files of the same name exist in the destination, they will be overwritten.
+ * Files can be removed with the `rm` command. To remove an entire directory (and its contents) we need to use `rm -r` (the `-r` option will remove files recursively).
+ * **Data loss warning:** Deleting files from the command line is permanent.
 
 
 # Linux Command Reference
