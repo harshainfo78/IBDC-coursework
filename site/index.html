@@ -260,6 +260,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#1-the-linux-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. The Linux Shell
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#2-navigating-the-filesystem" class="md-nav__link">
     <span class="md-ellipsis">
       2. Navigating the filesystem
@@ -354,6 +363,15 @@
   <a href="#the-terminal" class="md-nav__link">
     <span class="md-ellipsis">
       The Terminal
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-the-linux-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. The Linux Shell
     </span>
   </a>
   
@@ -589,9 +607,7 @@ Linux architecture refers to the layered structure of the Linux operating system
 </tbody>
 </table>
 <p><img alt="Image Description Goes Here" src="assets/img/8.png" /></p>
-<ol>
-<li>The Linux Shell</li>
-</ol>
+<h2 id="1-the-linux-shell"><strong>1. The Linux Shell</strong></h2>
 <p><strong>Running Commands</strong>: When the shell is first opened, you are presented with a prompt, indicating that the shell is waiting for input. A typical prompt on Linux may look like this: </p>
 <p><strong><code>username@hostname:~$</code></strong></p>
 <ul>
@@ -618,7 +634,9 @@ Linux architecture refers to the layered structure of the Linux operating system
 <li>We can pass a <i style="color:blue;">--help</i> option to the command, such as <i style="color:blue;">ls --help</i>.</li>
 <li>We can read its manual with <i style="color:blue;">man</i>, such as <i style="color:blue;">man ls</i>. To exit the man page you can type <strong>q</strong> (for “quit”).</li>
 </ol>
-<p>!!! <strong>Summary</strong>  </p>
+<div class="admonition tip">
+<p class="admonition-title">Summary</p>
+</div>
 <ul>
 <li>The Linux shell (command line) allows running complex operations with a few commands, interact with high-performance computing servers and write reproducible analysis in scripts.</li>
 <li>The basic syntax of a command is: <i style="color:blue;">command -options argument</i>.
@@ -677,7 +695,9 @@ If the user “rcb” was logged in, they would see <i style="color:blue;">/home
 <p>One option that can sometimes be useful is to find and delete all the files. For example, the following command would delete all files with <i style="color:blue;">.txt</i> extension:</p>
 <p><strong>find . -type f -name "*.txt" -delete</strong></p>
 <p>As you can imagine, this feature is very useful but also potentially dangerous as you may accidentally delete files you didn’t intend to. So, always make sure to run the command without the <i style="color:blue;">-delete</i> option first to check that only the files you really want to delete are being matched.</p>
-<p>!!! <strong>"Summary"</strong> </p>
+<div class="admonition tip">
+<p class="admonition-title">Summary</p>
+</div>
 <ul>
 <li>The filesystem is organised in a hierarchical way.</li>
 <li>Every user has a home directory, which on Linux is <code>/home/username/</code>.</li>
@@ -757,9 +777,8 @@ If the user “rcb” was logged in, they would see <i style="color:blue;">/home
 <p>Given that there is no way to retrieve files deleted using the shell, <i style="color:blue;">rm -r</i> should be used with great caution (you might consider adding the interactive option <i style="color:blue;">rm -r -i</i>).</p>
 <p>To remove empty directories, we can also use the <i style="color:blue;">rmdir</i> command. This is a safer option than <i style="color:blue;">rm -r</i>, because it will never delete the directory if it contains files, giving us a chance to check whether we really want to delete all its contents.</p>
 <div class="admonition tip">
-<p class="admonition-title">Tip</p>
+<p class="admonition-title">Summary</p>
 </div>
-<p>### Summary</p>
 <ul>
 <li>Directories can be created with the <code>mkdir</code> command.</li>
 <li>Files can be moved and/or renamed using the <code>mv</code> command.</li>
